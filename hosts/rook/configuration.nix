@@ -4,7 +4,7 @@
 }: {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ../extra/fonts.nix
+    ../../extra/fonts.nix
   ];
 
   # Flakes
@@ -127,6 +127,8 @@
     bat
     zellij
     helix
+
+    jujutsu
 
     rustc
     cargo

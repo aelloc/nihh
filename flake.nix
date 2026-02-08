@@ -40,7 +40,7 @@
       nixosConfigurations.akmal = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/rook/configuration.nix
 
           nur.modules.nixos.default
           nur.legacyPackages."x86_64-linux".repos.iopq.modules.xraya
