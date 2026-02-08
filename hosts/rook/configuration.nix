@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     /etc/nixos/hardware-configuration.nix
     ../../extra/fonts.nix

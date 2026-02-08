@@ -172,6 +172,8 @@
     zellij
     helix
 
+    jujutsu
+
     rustc
     cargo
     gcc

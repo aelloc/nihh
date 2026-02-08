@@ -2,8 +2,7 @@
   inputs,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     ../modules/astronvim.nix
     ../modules/firefox.nix
