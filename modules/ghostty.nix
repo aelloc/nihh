@@ -26,6 +26,9 @@
         "shift+alt+j=previous_tab"
         "shift+alt+k=next_tab"
 
+        # New tab
+        "alt+t=new_tab"
+
         # Remove the huge window panel on top
         "alt+g=toggle_window_decorations"
       ];

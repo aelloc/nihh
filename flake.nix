@@ -26,8 +26,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    wall-rs.url = "github:ae5259/wall-rs";
   };
 
   outputs = {
@@ -39,10 +37,37 @@
     ...
   } @ inputs:
     {
-      nixosConfigurations.t34 = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.akmal = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./nixos/configuration.nix
+
+          nur.modules.nixos.default
+          nur.legacyPackages."x86_64-linux".repos.iopq.modules.xraya
+
+          home-manager.nixosModules.home-manager
+
+          {
+            home-manager = {
+              sharedModules = [
+                nur.modules.homeManager.default
+              ];
+              useGlobalPkgs = true;
+              # useUserPackages = true;
+              # backupFileExtension = "backup";
+
+              extraSpecialArgs = {inherit inputs;};
+              users.akmal = import ./home-manager/pc-home.nix;
+            };
+          }
+        ];
+      };
+
+      nixosConfigurations.t34 = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+
+        modules = [
+          ./hosts/pad/configuration.nix
 
           nixos-hardware.nixosModules.lenovo-thinkpad-t14-intel-gen6
 

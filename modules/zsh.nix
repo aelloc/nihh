@@ -32,6 +32,7 @@
       nv = "nvim";
       mf = "microfetch";
       cl = "clear";
+      reload = "sudo nixos-rebuild switch --flake ";
       ee = "exa --tree";
 
       # NixOS related
