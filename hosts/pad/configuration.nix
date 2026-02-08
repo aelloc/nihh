@@ -1,9 +1,11 @@
 {
+  config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
     ../../extra/fonts.nix
   ];
 
@@ -65,6 +67,10 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.fprintd.enable = true;
+  services.fprintd.tod.enable = true;
+  services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
+
   services.thermald.enable = true;
 
   powerManagement = {
@@ -90,10 +96,13 @@
     #media-session.enable = true;
   };
 
+  # Enable touchpad support (enabled default in most desktopManager).
+  services.libinput.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.akmal = {
+  users.users.t34 = {
     isNormalUser = true;
-    description = "akmal";
+    description = "t34";
     extraGroups = [
       "networkmanager"
       "wheel"
@@ -114,6 +123,41 @@
     };
   };
 
+  hardware.nvidia.prime = {
+    # Make sure to use the correct Bus ID values for your system!
+    intelBusId = "PCI:1:0:0";
+    nvidiaBusId = "PCI:0:2:0";
+    # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
+  };
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    nvidiaPersistenced = false;
+    dynamicBoost.enable = false;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
+  };
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      mesa
+      libvdpau
+      libva-vdpau-driver
+      libva
+      vulkan-loader
+      vulkan-validation-layers
+    ];
+  };
+
+  services.xserver.videoDrivers = [
+    "modesetting" # example for Intel iGPU; use "amdgpu" here instead if your iGPU is AMD
+    "nvidia"
+  ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
@@ -127,8 +171,6 @@
     bat
     zellij
     helix
-
-    jujutsu
 
     rustc
     cargo
@@ -170,7 +212,7 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gnome];
+    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
     config.common.default = "gnome";
   };
 
@@ -181,6 +223,20 @@
   };
 
   programs.zsh.enable = true;
+
+  services.kmonad = {
+    enable = true;
+    keyboards.builtin = {
+      device = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
+      config = builtins.readFile ./keyboard.kbd;
+
+      defcfg = {
+        enable = true;
+        fallthrough = true;
+        allowCommands = true;
+      };
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -207,5 +263,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }
