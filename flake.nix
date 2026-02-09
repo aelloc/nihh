@@ -40,7 +40,7 @@
       ...
     }@inputs:
     {
-      nixosConfigurations.akmal = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.sae = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/rook/configuration.nix
@@ -60,7 +60,7 @@
               # backupFileExtension = "backup";
 
               extraSpecialArgs = { inherit inputs; };
-              users.akmal = import ./home-manager/pc-home.nix;
+              users.sae = import ./home-manager/pc-home.nix;
             };
           }
         ];

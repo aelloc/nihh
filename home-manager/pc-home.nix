@@ -22,8 +22,8 @@
     inputs.nix-xl.homeModules.nix-xl
   ];
 
-  home.username = "akmal";
-  home.homeDirectory = "/home/akmal";
+  home.username = "sae";
+  home.homeDirectory = "/home/sae";
 
   # link the configuration file in current directory to the specified location in home directory
   # home.file.wallpaper = ../extra/a_maidens_wish.png;

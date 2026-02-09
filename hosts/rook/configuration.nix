@@ -1,35 +1,21 @@
-{ pkgs, ... }:
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
+{ config, pkgs, ... }:
+
 {
   imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../../extra/fonts.nix
-  ];
-
-  # Flakes
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Keep the last 10 generation
-  boot.loader.systemd-boot.configurationLimit = 5;
-
-  # Weekly garbage collection
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
-
-  # Auto optimize store
-  nix.settings.auto-optimise-store = true;
-
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -48,17 +34,14 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us,ru";
+    layout = "us";
     variant = "";
-    options = "grp:lswitch,grp:lshift_toggle";
   };
-
-  services.flatpak.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -79,15 +62,17 @@
     #media-session.enable = true;
   };
 
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.akmal = {
+  users.users.sae = {
     isNormalUser = true;
-    description = "akmal";
+    description = "sae";
     extraGroups = [
       "networkmanager"
       "wheel"
     ];
-    shell = pkgs.zsh;
     packages = [
     ];
   };
@@ -106,6 +91,8 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
 
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
     vim
@@ -113,10 +100,6 @@
     micro
     curl
     bat
-    zellij
-    helix
-
-    jujutsu
 
     rustc
     cargo
@@ -124,20 +107,9 @@
     pkg-config
     alejandra
     zsh
-    fish
     starship
     element-desktop
 
-    # fish plugins
-    fishPlugins.done
-    fishPlugins.fzf-fish
-    fishPlugins.forgit
-    fishPlugins.hydro
-    fzf
-    fishPlugins.grc
-    grc
-
-    powertop
     resources
     deno
     zig
@@ -146,26 +118,21 @@
     gnome-extension-manager
   ];
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
-    config.common.default = "gnome";
-  };
-
-  programs.zsh.enable = true;
+  # Extra configs
+  services.flatpak.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -180,4 +147,5 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
+
 }
