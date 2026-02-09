@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
     ../../extra/fonts.nix
   ];
 
@@ -62,15 +63,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  services.thermald.enable = true;
-
-  powerManagement = {
-    enable = true;
-    powertop.enable = true;
-  };
-
-  powerManagement.cpuFreqGovernor = "powersave";
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -97,7 +89,6 @@
     ];
     shell = pkgs.zsh;
     packages = [
-      #  thunderbird
     ];
   };
 
@@ -147,7 +138,6 @@
     grc
 
     powertop
-    tlp
     resources
     deno
     zig
@@ -156,25 +146,10 @@
     gnome-extension-manager
   ];
 
-  # services.tlp = {
-  #   enable = true;
-  #
-  #   settings = {
-  #     START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-  #     STOP_CHARGE_THRESH_BAT0 = 79; # 80 and above it stops charging
-  #   };
-  # };
-
   xdg.portal = {
     enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-gnome];
+    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
     config.common.default = "gnome";
-  };
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
   programs.zsh.enable = true;
@@ -182,15 +157,15 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
