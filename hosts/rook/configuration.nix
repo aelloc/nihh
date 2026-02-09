@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -39,8 +39,9 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
+    layout = "us,ru";
     variant = "";
+    options = "grp:lswitch,grp:lshift_toggle";
   };
 
   # Enable CUPS to print documents.
@@ -73,6 +74,7 @@
       "networkmanager"
       "wheel"
     ];
+    shell = pkgs.zsh;
     packages = [
     ];
   };
@@ -121,6 +123,7 @@
   # Extra configs
   services.flatpak.enable = true;
 
+  programs.zsh.enable = true;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
