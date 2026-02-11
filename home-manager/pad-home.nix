@@ -2,11 +2,12 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../modules/astronvim.nix
     ../modules/firefox.nix
-    ../modules/zsh.nix
+    # ../modules/zsh.nix
     ../modules/git.nix
     ../modules/litexl.nix
     ../modules/vscode.nix
@@ -17,13 +18,20 @@
     ../modules/alacritty.nix
     ../modules/wezterm.nix
 
-    # Disable fish for learning purposes
-    # ../modules/fish.nix
+    ../modules/fish.nix
     inputs.nix-xl.homeModules.nix-xl
   ];
 
   home.username = "t34";
   home.homeDirectory = "/home/t34";
+
+  xdg.configFile."mimeapps.list" = {
+    force = true;
+    text = ''
+      [Default Applications]
+      text/html=firefox.desktop
+    '';
+  };
 
   # link the configuration file in current directory to the specified location in home directory
   # home.file.wallpaper = ../extra/a_maidens_wish.png;

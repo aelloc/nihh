@@ -89,7 +89,7 @@
               # backupFileExtension = "backup";
 
               extraSpecialArgs = { inherit inputs; };
-              users.t34 = import ./home-manager/home.nix;
+              users.t34 = import ./home-manager/pad-home.nix;
             };
           }
         ];

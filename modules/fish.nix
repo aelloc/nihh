@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -15,6 +16,12 @@
       ls = "exa";
       nv = "nvim";
       mf = "microfetch";
+
+      reload = "sudo nixos-rebuild switch --flake .#$(whoami)";
+
+      # NixOS related
+      past = "nix profile history --profile /nix/var/nix/profiles/system";
+      garbage = "sudo nix-collect-garbage --delete-old";
     };
 
     plugins = [

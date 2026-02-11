@@ -107,7 +107,7 @@
       "networkmanager"
       "wheel"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     packages = [
       #  thunderbird
     ];
@@ -224,7 +224,8 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   services.kmonad = {
     enable = true;
