@@ -2,11 +2,12 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../modules/astronvim.nix
     ../modules/firefox.nix
-    ../modules/zsh.nix
+    # ../modules/zsh.nix
     ../modules/git.nix
     ../modules/litexl.nix
     ../modules/vscode.nix
@@ -17,8 +18,9 @@
     ../modules/alacritty.nix
     ../modules/wezterm.nix
 
-    # Disable fish for learning purposes
-    # ../modules/fish.nix
+    # --Disable fish for learning purposes--
+    # Revive fish
+    ../modules/fish.nix
     inputs.nix-xl.homeModules.nix-xl
   ];
 
@@ -73,6 +75,8 @@
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
     ipcalc # it is a calculator for the IPv4/v6 addresses
+
+    gradia
 
     # misc
     cowsay

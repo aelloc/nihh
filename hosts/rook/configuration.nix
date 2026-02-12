@@ -63,6 +63,12 @@
     #media-session.enable = true;
   };
 
+  # Flakes
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -74,7 +80,8 @@
       "networkmanager"
       "wheel"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
+    ignoreShellProgramCheck = true;
     packages = [
     ];
   };
@@ -112,6 +119,15 @@
     starship
     element-desktop
 
+    # fish plugins
+    fishPlugins.done
+    fishPlugins.fzf-fish
+    fishPlugins.forgit
+    fishPlugins.hydro
+    fzf
+    fishPlugins.grc
+    grc
+
     resources
     deno
     zig
@@ -123,7 +139,9 @@
   # Extra configs
   services.flatpak.enable = true;
 
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
+  programs.fish.enable = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
