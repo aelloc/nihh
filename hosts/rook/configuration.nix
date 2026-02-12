@@ -8,6 +8,11 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+
+    # Fonts
+    ../../extra/fonts.nix
+    # System packages
+    ../../packages/system.nix
   ];
 
   # Bootloader.
@@ -102,39 +107,6 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    git
-    vim
-    wget
-    micro
-    curl
-    bat
-
-    rustc
-    cargo
-    gcc
-    pkg-config
-    alejandra
-    zsh
-    starship
-    element-desktop
-
-    # fish plugins
-    fishPlugins.done
-    fishPlugins.fzf-fish
-    fishPlugins.forgit
-    fishPlugins.hydro
-    fzf
-    fishPlugins.grc
-    grc
-
-    resources
-    deno
-    zig
-    gnome-screenshot
-    gnome-tweaks
-    gnome-extension-manager
-  ];
 
   # Extra configs
   services.flatpak.enable = true;

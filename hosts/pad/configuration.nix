@@ -6,7 +6,11 @@
 {
   imports = [
     ./hardware-configuration.nix
+
+    # Fonts
     ../../extra/fonts.nix
+    # System packages
+    ../../packages/system.nix
   ];
 
   # Flakes
@@ -161,56 +165,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
-
-  environment.systemPackages = with pkgs; [
-    git
-    vim
-    wget
-    micro
-    curl
-    bat
-    zellij
-    helix
-
-    jujutsu
-
-    rustc
-    cargo
-    gcc
-    pkg-config
-    alejandra
-    zsh
-    fish
-    starship
-    element-desktop
-
-    # fish plugins
-    fishPlugins.done
-    fishPlugins.fzf-fish
-    fishPlugins.forgit
-    fishPlugins.hydro
-    fzf
-    fishPlugins.grc
-    grc
-
-    powertop
-    tlp
-    resources
-    deno
-    zig
-    gnome-screenshot
-    gnome-tweaks
-    gnome-extension-manager
-  ];
-
-  # services.tlp = {
-  #   enable = true;
-  #
-  #   settings = {
-  #     START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-  #     STOP_CHARGE_THRESH_BAT0 = 79; # 80 and above it stops charging
-  #   };
-  # };
 
   xdg.portal = {
     enable = true;
