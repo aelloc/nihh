@@ -2,8 +2,6 @@
 {
 
   home.packages = with pkgs; [
-    nnn # terminal file manager
-
     # archives
     zip
     xz
@@ -18,35 +16,12 @@
     fzf # A command-line fuzzy finder
     fd
 
-    # networking tools
-    mtr # A network diagnostic tool
-    iperf3
-    dnsutils # `dig` + `nslookup`
-    ldns # replacement of `dig`, it provide the command `drill`
-    aria2 # A lightweight multi-protocol & multi-source command-line download utility
-    socat # replacement of openbsd-netcat
-    nmap # A utility for network discovery and security auditing
-    ipcalc # it is a calculator for the IPv4/v6 addresses
-
-    # misc
-    cowsay
-    file
-    which
-    tree
-    gnused
-    gnutar
-    gawk
-    zstd
-    gnupg
-
-    figma-linux
-
-    onefetch
-    microfetch
-    fastfetch
-    neofetch
+    figma-linux # figma
+    onefetch # neofetch for git repository
+    microfetch # minimal neofetch
+    fastfetch # fast neofetch
+    neofetch # neofetch
     # nix related
-    #
     # it provides the command `nom` works just like `nix`
     # with more details log output
     nix-output-monitor
@@ -71,28 +46,18 @@
     usbutils # lsusb
 
     zoxide # for faster navigation
-
-    ayugram-desktop
-    spotify
-    yandex-music
-    discord
-
-    emacs
-
-    wpsoffice
-
-    lite-xl
-    yazi
-    ffmpeg
-    yt-dlp
-
-    obs-studio
-    feh
-    swaybg
-
-    fuzzylite
-
-    bc
-    st
+    ayugram-desktop # telegram
+    spotify # spotify
+    yandex-music # yandex, idk why do i need it at all
+    discord # same with yandex
+    wpsoffice # for docs
+    lite-xl # lightweight code editor
+    yazi # terminal vile explorer
+    ffmpeg # shame on you if you don't know it
+    yt-dlp # youtube video downloader
+    obs-studio # video recorder
+    feh # lightweight image viewer
+    swaybg # wallpaper tool for wayland compositors
+    gradia # screenshot tool
   ];
 }

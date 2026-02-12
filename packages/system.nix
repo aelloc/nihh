@@ -9,10 +9,7 @@
     bat
     zellij
     helix
-
     jujutsu
-
-    e-imzo-manager
 
     rustc
     cargo
