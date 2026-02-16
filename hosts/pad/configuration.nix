@@ -127,41 +127,6 @@
     };
   };
 
-  hardware.nvidia.prime = {
-    # Make sure to use the correct Bus ID values for your system!
-    intelBusId = "PCI:1:0:0";
-    nvidiaBusId = "PCI:0:2:0";
-    # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
-  };
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    nvidiaPersistenced = false;
-    dynamicBoost.enable = false;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
-  };
-
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      mesa
-      libvdpau
-      libva-vdpau-driver
-      libva
-      vulkan-loader
-      vulkan-validation-layers
-    ];
-  };
-
-  services.xserver.videoDrivers = [
-    "modesetting" # example for Intel iGPU; use "amdgpu" here instead if your iGPU is AMD
-    "nvidia"
-  ];
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
@@ -181,20 +146,13 @@
   # programs.zsh.enable = true;
   programs.fish.enable = true;
 
-  services.kmonad = {
-    enable = true;
-    keyboards.builtin = {
-      device = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
-      config = builtins.readFile ./keyboard.kbd;
-
-      defcfg = {
-        enable = true;
-        fallthrough = true;
-        allowCommands = true;
-      };
-    };
+  xdg.mime.defaultApplications = {
+    "text/html" = "firefox.desktop";
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "x-scheme-handler/about" = "firefox.desktop";
+    "x-scheme-handler/unknown" = "firefox.desktop";
   };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
