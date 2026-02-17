@@ -6,8 +6,6 @@
 
     nix-xl.url = "github:PassiveLemon/nix-xl";
 
-    awzod.url = "github:ae5259/awzod";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,6 +26,8 @@
     };
 
     wall-rs.url = "github:ae5259/wall-rs";
+    awzod.url = "github:ae5259/awzod";
+    sl.url = "github:ae5259/statline";
   };
 
   outputs =
@@ -37,7 +37,12 @@
       home-manager,
       nixos-hardware,
       nur,
+
+      # wall-rs,
+      # sl,
+      # awzod,
       ...
+
     }@inputs:
     {
       nixosConfigurations.sae = nixpkgs.lib.nixosSystem {
