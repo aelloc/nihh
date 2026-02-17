@@ -1,40 +1,13 @@
 {
-  inputs,
   ...
 }:
 {
   imports = [
-    ../packages/home.nix
-
-    ../modules/astronvim.nix
-    ../modules/firefox.nix
-    # ../modules/zsh.nix
-    ../modules/git.nix
-    ../modules/litexl.nix
-    ../modules/vscode.nix
-    ../modules/starship.nix
-
-    ../modules/ghostty.nix
-    ../modules/kitty.nix
-    ../modules/alacritty.nix
-    ../modules/wezterm.nix
-
-    # --Disable fish for learning purposes--
-    # Revive fish
-    ../modules/fish.nix
-    inputs.nix-xl.homeModules.nix-xl
+    ./shared.nix
   ];
 
   home.username = "sae";
   home.homeDirectory = "/home/sae";
-
-  programs.zoxide.enable = true;
-  programs.zoxide.enableFishIntegration = true;
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

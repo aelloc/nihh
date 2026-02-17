@@ -1,46 +1,13 @@
 {
-  inputs,
   ...
 }:
 {
   imports = [
-    ../packages/home.nix
-
-    ../modules/astronvim.nix
-    ../modules/firefox.nix
-    # ../modules/zsh.nix
-    ../modules/git.nix
-    ../modules/litexl.nix
-    ../modules/vscode.nix
-    ../modules/starship.nix
-
-    ../modules/ghostty.nix
-    ../modules/kitty.nix
-    ../modules/alacritty.nix
-    ../modules/wezterm.nix
-
-    ../modules/fish.nix
-    inputs.nix-xl.homeModules.nix-xl
+    ./shared.nix
   ];
 
   home.username = "t34";
   home.homeDirectory = "/home/t34";
-
-  xdg.configFile."mimeapps.list" = {
-    force = true;
-    text = ''
-      [Default Applications]
-      text/html=firefox.desktop
-    '';
-  };
-
-  programs.zoxide.enable = true;
-  programs.zoxide.enableFishIntegration = true;
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

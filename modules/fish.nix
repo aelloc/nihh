@@ -17,7 +17,7 @@
       nv = "nvim";
       mf = "microfetch";
 
-      reload = "sudo nixos-rebuild switch --flake .#$(whoami)";
+      reload = "sudo nixos-rebuild switch --flake ~/nihh#$(whoami)";
 
       # NixOS related
       past = "nix profile history --profile /nix/var/nix/profiles/system";

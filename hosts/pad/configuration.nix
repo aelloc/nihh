@@ -117,6 +117,7 @@
     ];
   };
 
+  home-manager.backupFileExtension = "backup";
   # Install firefox.
   programs.firefox = {
     enable = true;
