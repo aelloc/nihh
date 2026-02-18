@@ -17,6 +17,8 @@
       nv = "nvim";
       mf = "microfetch";
 
+      die = "shutdown now";
+
       reload = "sudo nixos-rebuild switch --flake ~/nihh#$(whoami)";
 
       # NixOS related
