@@ -25,12 +25,4 @@
     inputs.nix-xl.homeModules.nix-xl
   ];
 
-  xdg.configFile."mimeapps.list" = {
-    force = true;
-    text = ''
-      [Default Applications]
-      text/html=firefox.desktop
-    '';
-  };
-
 }
