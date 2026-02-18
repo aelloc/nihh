@@ -24,5 +24,4 @@
     ../modules/fish.nix
     inputs.nix-xl.homeModules.nix-xl
   ];
-
 }

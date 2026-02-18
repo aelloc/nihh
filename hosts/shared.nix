@@ -3,6 +3,19 @@
   ...
 }:
 {
+  # Bootloader.
+  boot.loader = {
+    grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+    };
+
+    efi = {
+      canTouchEfiVariables = true;
+    };
+  };
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
