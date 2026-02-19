@@ -18,6 +18,7 @@
       mf = "microfetch";
 
       die = "shutdown now";
+      re = "reboot";
 
       reload = "sudo nixos-rebuild switch --flake ~/nihh#$(whoami)";
 
