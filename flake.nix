@@ -48,6 +48,7 @@
       nixosConfigurations.sae = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
+          inputs.spicetify-nix.nixosModules.default
           ./hosts/rook/configuration.nix
 
           nur.modules.nixos.default

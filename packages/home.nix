@@ -56,7 +56,7 @@ in
 
       zoxide # for faster navigation
       ayugram-desktop # telegram
-      spotify # spotify
+      # spotify # spotify
       yandex-music # yandex, idk why do i need it at all
       discord # same with yandex
       wpsoffice # for docs

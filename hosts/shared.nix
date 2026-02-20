@@ -4,10 +4,6 @@
   ...
 }:
 {
-  imports = [
-    inputs.spicetify-nix.nixosModules.default
-  ];
-
   programs.spicetify =
     let
       spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
@@ -22,6 +18,7 @@
       ];
       enabledCustomApps = with spicePkgs.apps; [
         newReleases
+        marketplace
         ncsVisualizer
       ];
       enabledSnippets = with spicePkgs.snippets; [
