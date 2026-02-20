@@ -76,6 +76,7 @@
         specialArgs = { inherit inputs; };
 
         modules = [
+          inputs.spicetify-nix.nixosModules.default
           ./hosts/pad/configuration.nix
 
           nixos-hardware.nixosModules.lenovo-thinkpad-t14-intel-gen6
