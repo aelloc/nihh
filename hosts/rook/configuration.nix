@@ -18,11 +18,23 @@
     ../shared.nix
   ];
 
-  hardware.bluetooth.settings = {
-    General = {
-      Experimental = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = true;
+      };
+
+      Policy = {
+        AutoEnable = true;
+      };
     };
   };
+
+  services.blueman.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.sae = {
