@@ -36,27 +36,24 @@
     , ...
 
     }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
     {
       nixosConfigurations.sae = import ./hosts/rook inputs;
       nixosConfigurations.t34 = import ./hosts/pad inputs;
-    }
 
-    // (
-      let
-        system = "x86_64-linux";
-        pkgs = import nixpkgs { inherit system; };
-      in
-      {
-        formatter.${system} = pkgs.nixpkgs-fmt;
-        devShells.${system}.default = pkgs.mkShell {
-          packages = with pkgs; [
-            self.formatter.${system}
-            nixd
-            statix
-            deadnix
-            nixfmt-tree
-          ];
-        };
-      }
-    );
+      formatter.${system} = pkgs.nixpkgs-fmt;
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          self.formatter.${system}
+
+          nixd
+          statix
+          deadnix
+          nixfmt-tree
+        ];
+      };
+    };
 }
