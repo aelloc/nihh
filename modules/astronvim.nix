@@ -1,4 +1,6 @@
-{ pkgs, ... }:
+{ pkgs
+, ...
+}:
 {
   xdg.configFile.astronvim = {
     source = ../astronvim;

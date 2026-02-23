@@ -1,4 +1,6 @@
-{ pkgs, ... }:
+{ pkgs
+, ...
+}:
 {
   fonts = {
     fontDir.enable = true;

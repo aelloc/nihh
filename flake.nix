@@ -31,17 +31,12 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      nixos-hardware,
-      nur,
-
-      # wall-rs,
-      # sl,
-      # awzod,
-      ...
+    { self
+    , nixpkgs
+    , home-manager
+    , nixos-hardware
+    , nur
+    , ...
 
     }@inputs:
     {
@@ -108,7 +103,7 @@
         pkgs = import nixpkgs { inherit system; };
       in
       {
-        formatter.${system} = pkgs.nixfmt;
+        formatter.${system} = pkgs.nixpkgs-fmt;
         devShells.${system}.default = pkgs.mkShell {
           packages = with pkgs; [
             self.formatter.${system}

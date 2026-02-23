@@ -5,7 +5,6 @@
 
     theme = "gruvbox_dark";
 
-    settings = {
-    };
+    settings = { };
   };
 }
