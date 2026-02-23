@@ -24,6 +24,7 @@
     powertop.enable = true;
   };
   powerManagement.cpuFreqGovernor = "powersave";
+  services.power-profiles-daemon.enable = false;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;

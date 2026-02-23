@@ -38,7 +38,7 @@
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {inherit system;};
     in
     {
       nixosConfigurations.sae = import ./hosts/rook inputs;
