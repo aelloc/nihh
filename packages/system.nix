@@ -3,6 +3,9 @@
 }:
 {
   environment.systemPackages = with pkgs; [
+    vial
+    qemu
+
     git
     vim
     wget
