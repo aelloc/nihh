@@ -52,8 +52,7 @@ pkgs.rustPlatform.buildRustPackage {
 
   # Required for runtime shared object loading
   LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath (
-    with pkgs;
-    [
+    with pkgs; [
       wayland
       libxkbcommon
       libGL

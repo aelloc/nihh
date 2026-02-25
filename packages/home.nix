@@ -6,9 +6,7 @@ let
   system = pkgs.system;
 in
 {
-
-  home.packages =
-    with pkgs;
+  home.packages = with pkgs;
     [
       # archives
       zip
@@ -74,6 +72,5 @@ in
       inputs.wall-rs.packages.${system}.default
       inputs.sl.packages.${system}.default
       inputs.awzod.packages.${system}.default
-
     ];
 }

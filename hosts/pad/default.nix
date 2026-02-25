@@ -3,7 +3,7 @@
 , nixos-hardware
 , nur
 , ...
-}@ inputs:
+} @ inputs:
 nixpkgs.lib.nixosSystem {
   specialArgs = { inherit inputs; };
 
@@ -33,5 +33,3 @@ nixpkgs.lib.nixosSystem {
     }
   ];
 }
-
-
