@@ -6,6 +6,7 @@
   imports = [
     ../packages/home.nix
 
+    ../modules/chromium.nix
     ../modules/additions.nix
     ../modules/astronvim.nix
     ../modules/firefox.nix
