@@ -67,6 +67,8 @@ in
       feh # lightweight image viewer
       swaybg # wallpaper tool for wayland compositors
       gradia # screenshot tool
+
+      fluffychat
     ]
     ++ [
       inputs.wall-rs.packages.${system}.default
