@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
+    ./power.nix
 
     # Fonts
     ../../extra/fonts.nix
@@ -15,13 +16,6 @@
   services.fprintd.tod.driver = pkgs.libfprint-2-tod1-goodix-550a;
 
   services.thermald.enable = true;
-
-  powerManagement = {
-    enable = true;
-    powertop.enable = true;
-  };
-  powerManagement.cpuFreqGovernor = "powersave";
-  services.power-profiles-daemon.enable = false;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
