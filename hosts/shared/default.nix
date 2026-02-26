@@ -10,8 +10,8 @@
 
 
   # Essential user groups for kanata
-  users.groups.uinput = {};
-  users.groups.input = {};
+  users.groups.uinput = { };
+  users.groups.input = { };
 
   # Set your time zone.
   time.timeZone = "Asia/Tashkent";
