@@ -8,7 +8,7 @@
     # System packages
     ../../packages/system.nix
     # Shared configuration
-    ../shared.nix
+    ../shared
   ];
 
   services.fprintd.enable = true;
