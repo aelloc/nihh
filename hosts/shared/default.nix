@@ -1,57 +1,17 @@
-{ inputs
-, pkgs
+{ pkgs
 , ...
 }: {
-  programs.spicetify =
-    let
-      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-    in
-    {
-      enable = true;
-
-      enabledExtensions = with spicePkgs.extensions; [
-        adblock
-        hidePodcasts
-        shuffle # shuffle+ (special characters are sanitized out of extension names)
-      ];
-      enabledCustomApps = with spicePkgs.apps; [
-        newReleases
-        marketplace
-        ncsVisualizer
-      ];
-      enabledSnippets = with spicePkgs.snippets; [
-        rotatingCoverart
-        pointer
-      ];
-
-      theme = spicePkgs.themes.catppuccin;
-      colorScheme = "mocha";
-    };
-
-  # Bootloader.
-  boot.loader = {
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev";
-    };
-
-    efi = {
-      canTouchEfiVariables = true;
-    };
-  };
-
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
-
-  networking.useDHCP = false;
-  networking.networkmanager.insertNameservers = [
-    "1.1.1.1"
+  imports = [
+    ./bootloader.nix
+    ./keyboard.nix
+    ./network.nix
+    ./spicetify.nix
   ];
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  # Essential user groups for kanata
+  users.groups.uinput = {};
+  users.groups.input = {};
 
   # Set your time zone.
   time.timeZone = "Asia/Tashkent";
