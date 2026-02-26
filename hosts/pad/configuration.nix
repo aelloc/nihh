@@ -27,11 +27,14 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "uinput"
+      "input"
     ];
     shell = pkgs.fish;
     packages = [
     ];
   };
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

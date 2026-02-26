@@ -12,7 +12,7 @@
     ../../packages/system.nix
 
     # Shared configuration
-    ../shared.nix
+    ../shared
   ];
 
   hardware.bluetooth = {
@@ -40,6 +40,8 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "input"
+      "uinput"
     ];
     shell = pkgs.fish;
     ignoreShellProgramCheck = true;
