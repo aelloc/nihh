@@ -6,6 +6,7 @@
     ../modules/additions.nix
     ../modules/astronvim.nix
     ../modules/firefox.nix
+    ../modules/lazygit.nix
     # ../modules/zsh.nix
     ../modules/git.nix
     ../modules/litexl.nix

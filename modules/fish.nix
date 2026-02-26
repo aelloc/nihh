@@ -12,14 +12,16 @@
 
     shellAliases = {
       zj = "zellij";
-      ls = "exa";
+      ls = "exa --icons=always";
       nv = "nvim";
       mf = "microfetch";
+      ee = "ls --tree";
+      lg = "lazygit";
 
       die = "shutdown now";
       re = "reboot";
 
-      reload = "sudo nixos-rebuild switch --flake ~/nihh#$(whoami)";
+      reload = "sudo nixos-rebuild switch --flake ~/nihh#$(whoami) && $SHELL";
 
       # NixOS related
       past = "nix profile history --profile /nix/var/nix/profiles/system";
