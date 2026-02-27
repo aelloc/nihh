@@ -7,6 +7,7 @@
     ../modules/astronvim.nix
     ../modules/firefox.nix
     ../modules/lazygit.nix
+    ../modules/zellij.nix
     # ../modules/zsh.nix
     ../modules/git.nix
     ../modules/litexl.nix

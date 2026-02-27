@@ -9,7 +9,6 @@
     micro
     curl
     bat
-    zellij
     helix
     jujutsu
 
