@@ -9,7 +9,7 @@
       keyboard = {
         bindings = [
           {
-            key = "K";
+            key = "I";
             mods = "Alt";
             action = "ToggleViMode";
           }
