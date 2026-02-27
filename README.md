@@ -110,3 +110,40 @@ explanatory except `additions.nix`:
 - `additions.nix` contains configuration of apps that I don't bother to modify a
   lot and are too simple to configure anyways, such as `direnv`, `btop` and
   `zoxide`.
+
+### packages
+
+My packages folder have only 2 files, `home.nix` and `system.nix` with each of
+them storing list of packages I need.
+
+- `home.nix` has `home.packages`
+- `system.nix` has `environment.systemPackages`
+
+### astronvim
+
+As the name suggests, it keeps my `neovim` configurations that I have very
+little idea how it works. It was configured solely by
+[Shakhzod Kudratov](https://github.com/shakhzodkudratov), my participance
+included listening and learning it which I might have failed too.
+
+Remaining folders don't have much impact, but I chose to document them because
+it is fun.
+
+### extra
+
+- [`a_maidens_wish.png`](./extra/a_maidens_wish.png) is my wallpaper on all of
+  my devices, which I found from my colleagues Telegram channel.
+- inside [`fonts.nix`](./extra/fonts.nix), I tried to confiure my fonts
+  declaratively, because San Francisco Mono was not available on `nixpkgs`,
+  after some time I decided to give up and use the beautiful Iosevka instead.
+- [`watershot.nix`](./extra/watershot.nix) has Shakhzod's attempt on making
+  flameshot alternative, watershot work, but eventually failed, so I used
+  another alternative called `Gradia` anways.
+
+### fonts
+
+In this folder, I just keep San Francisco's `.otc` files just in case I want to
+try to make it work in the future.
+
+With that being said, this is the total overview of my `nihh` repository. This
+document will be updated further, but slowly.
