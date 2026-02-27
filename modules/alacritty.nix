@@ -9,16 +9,20 @@
       keyboard = {
         bindings = [
           {
-            key = "Shift";
-            mods = "Command";
+            key = "K";
+            mods = "Alt";
             action = "ToggleViMode";
           }
         ];
       };
 
+      scrolling = {
+        history = 100000;
+      };
+
       window = {
-        decorations = "buttonless";
-        startup_mode = "Maximized";
+        decorations = "none";
+        startup_mode = "SimpleFullscreen";
         padding = {
           x = 5;
           y = 0;
@@ -29,17 +33,17 @@
         size = 19;
 
         normal = {
-          family = "Hack Nerd Font";
+          family = "Iosevka";
           style = "Regular";
         };
 
         bold = {
-          family = "Hack Nerd Font";
+          family = "Iosevka";
           style = "Bold";
         };
 
         italic = {
-          family = "Hack Nerd Font";
+          family = "Iosevka";
           style = "Italic";
         };
       };
