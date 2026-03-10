@@ -20,6 +20,7 @@
 
       die = "shutdown now";
       re = "reboot";
+      sleep = "systemctl hibernate";
 
       reload = "sudo nixos-rebuild switch --flake ~/nihh#$(whoami) && $SHELL";
 
