@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     vial
     qemu
@@ -39,5 +39,7 @@
     gnome-screenshot
     gnome-tweaks
     gnome-extension-manager
+
+    cloudflare-warp
   ];
 }

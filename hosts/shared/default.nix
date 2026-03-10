@@ -8,6 +8,9 @@
     ./spicetify.nix
   ];
 
+  services.cloudflare-warp = {
+    enable = true;
+  };
 
   # Essential user groups for kanata
   users.groups.uinput = { };

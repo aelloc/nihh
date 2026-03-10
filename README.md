@@ -147,3 +147,29 @@ try to make it work in the future.
 
 With that being said, this is the total overview of my `nihh` repository. This
 document will be updated further, but slowly.
+
+## Imperative things
+
+Some of the things I use are configured imperatively, so in order to not forget
+what steps I have followed in the past, I decided to write them down here.
+
+### Cloudflare warp
+
+It is already installed included in my [system packages](./packages/system.nix)
+file and the only declarative thing I could add is to enable the systemd service
+in my [shared nixos configurations](./hosts/shared/default.nix). After that I
+need to register a new account from command line using these commands:
+
+```bash
+# to create a new account
+warp-cli registration new
+
+# to check account details
+warp-cli registration show
+
+# and connect
+warp-cli connect
+```
+
+And that's it. [Git's](https://git-scm.com/) website is working now. If not,
+there is certainly a problem that needs some debugging process.

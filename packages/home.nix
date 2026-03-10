@@ -1,11 +1,10 @@
-{ inputs
-, pkgs
-, ...
-}:
-let
-  system = pkgs.system;
-in
 {
+  inputs,
+  pkgs,
+  ...
+}: let
+  system = pkgs.system;
+in {
   home.packages = with pkgs;
     [
       # archives
