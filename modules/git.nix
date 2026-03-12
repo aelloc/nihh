@@ -6,6 +6,7 @@
     ignores = [
       ".idea"
       "node_modules"
+      # where did this come from? I don't own Apple Device 🗿
       ".DS_Store"
       "*.swp"
     ];
