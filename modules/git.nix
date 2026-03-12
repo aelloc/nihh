@@ -26,7 +26,7 @@
       init.defaultBranch = "main";
 
       core = {
-        editor = "micro";
+        editor = "nvim";
         autocrlf = "input";
       };
 
