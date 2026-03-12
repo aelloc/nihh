@@ -2,6 +2,7 @@
 , home-manager
 , nixos-hardware
 , nur
+, nid
 , ...
 } @ inputs:
 nixpkgs.lib.nixosSystem {
@@ -10,6 +11,7 @@ nixpkgs.lib.nixosSystem {
   modules = [
     inputs.spicetify-nix.nixosModules.default
     ./configuration.nix
+    nid.nixosModules.default
 
     nixos-hardware.nixosModules.lenovo-thinkpad-t14-intel-gen6
 

@@ -8,6 +8,10 @@
     ./spicetify.nix
   ];
 
+  programs.nix-index-database.comma = {
+    enable = true;
+  };
+
   services.cloudflare-warp = {
     enable = true;
   };

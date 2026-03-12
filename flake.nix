@@ -25,6 +25,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # nix-index-database
+    nid = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     wall-rs.url = "github:ae5259/wall-rs";
     awzod.url = "github:ae5259/awzod";
     sl.url = "github:ae5259/statline";
@@ -34,6 +40,7 @@
     { self
     , nixpkgs
     , ...
+
     } @ inputs:
     let
       system = "x86_64-linux";
