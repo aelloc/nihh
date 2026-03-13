@@ -10,6 +10,21 @@
 
   programs.nix-index-database.comma = {
     enable = true;
+
+  };
+
+  services.udev = {
+    extraRules = ''
+      KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{serial}=="*vial:f64c2b3c*", MODE="0660", TAG+="uaccess", TAG+="udev-acl"
+    '';
+
+    packages = with pkgs; [
+      qmk
+      qmk-udev-rules # the only relevant
+      qmk_hid
+      via
+      vial
+    ];
   };
 
   services.cloudflare-warp = {
