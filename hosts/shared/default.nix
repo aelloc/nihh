@@ -3,7 +3,7 @@
 }: {
   imports = [
     ./bootloader.nix
-    ./keyboard.nix
+    # ./keyboard.nix
     ./network.nix
     ./spicetify.nix
   ];

@@ -66,6 +66,9 @@ in
       swaybg # wallpaper tool for wayland compositors
       gradia # screenshot tool
 
+      prismlauncher
+      jre
+
       fluffychat
     ]
     ++ [
