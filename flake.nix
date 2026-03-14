@@ -1,8 +1,10 @@
 {
   description = "My nihh configs.";
 
+
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:xinux-org/nixpkgs/nixos-25.11";
 
     nix-xl.url = "github:PassiveLemon/nix-xl";
 

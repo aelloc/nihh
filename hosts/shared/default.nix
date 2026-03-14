@@ -27,6 +27,19 @@
     ];
   };
 
+  nix = {
+    # nixConfig = {
+    #   extra-substituters = [ "https://cache.xinux.uz/" ];
+    #   extra-trusted-public-keys = [ "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" ];
+    # };
+    settings = {
+      extra-substituters = [ "https://cache.xinux.uz/" ];
+      extra-trusted-public-keys = [ "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" ];
+
+      experimental-features = "nix-command flakes";
+    };
+  };
+
   services.cloudflare-warp = {
     enable = true;
   };
@@ -100,12 +113,6 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
-
-  # Flakes
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 
   # Auto optimize store
   nix.settings.auto-optimise-store = true;
