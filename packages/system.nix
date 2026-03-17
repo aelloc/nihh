@@ -11,7 +11,6 @@
     micro
     curl
     bat
-    helix
     jujutsu
 
     rustc
