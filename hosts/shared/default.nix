@@ -1,6 +1,4 @@
-{ pkgs
-, ...
-}: {
+{ pkgs, ... }: {
   imports = [
     ./bootloader.nix
     # ./keyboard.nix
@@ -10,7 +8,6 @@
 
   programs.nix-index-database.comma = {
     enable = true;
-
   };
 
   services.udev = {

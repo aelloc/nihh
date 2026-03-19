@@ -1,7 +1,6 @@
 {
   description = "My nihh configs.";
 
-
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs.url = "github:xinux-org/nixpkgs/nixos-25.11";
@@ -17,6 +16,11 @@
 
     nur = {
       url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-data = {
+      url = "github:xinux-org/nix-data";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,13 +46,14 @@
     { self
     , nixpkgs
     , ...
-
     } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
     in
     {
+      systems.modules.nixos = with inputs; [ ];
+
       nixosConfigurations.sae = import ./hosts/rook inputs;
       nixosConfigurations.t34 = import ./hosts/pad inputs;
 
