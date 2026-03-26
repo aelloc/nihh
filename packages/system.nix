@@ -10,6 +10,8 @@
     curl
     bat
     jujutsu
+    tokei
+    cloc
 
     rustc
     cargo
