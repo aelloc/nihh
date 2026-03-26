@@ -1,25 +1,10 @@
-{ inputs, ... }: {
-  imports = [
+{ inputs
+, ...
+}:
+let modules = import ../lib/folder.nix { }; in {
+  imports = modules.modules
+    ++ [
     ../packages/home.nix
-
-    ../modules/chromium.nix
-    ../modules/additions.nix
-    ../modules/astronvim.nix
-    ../modules/firefox.nix
-    ../modules/lazygit.nix
-    ../modules/zellij.nix
-    # ../modules/zsh.nix
-    ../modules/git.nix
-    ../modules/litexl.nix
-    ../modules/vscode.nix
-    ../modules/starship.nix
-
-    ../modules/ghostty.nix
-    ../modules/kitty.nix
-    ../modules/alacritty.nix
-    ../modules/wezterm.nix
-
-    ../modules/fish.nix
     inputs.nix-xl.homeModules.nix-xl
   ];
 }

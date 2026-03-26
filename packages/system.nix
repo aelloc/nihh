@@ -40,7 +40,7 @@
     gnome-screenshot
     gnome-tweaks
     gnome-extension-manager
- 
+
     cloudflare-warp
   ];
 }
