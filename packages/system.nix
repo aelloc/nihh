@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ inputs
+, pkgs
+, ...
+}: {
   environment.systemPackages = with pkgs; [
     vial
     qemu
@@ -42,5 +45,7 @@
     gnome-extension-manager
 
     cloudflare-warp
+  ] ++ [
+    inputs.uchar.packages.${system}.default
   ];
 }
