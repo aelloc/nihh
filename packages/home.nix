@@ -68,6 +68,7 @@ in
 
       prismlauncher
       jre
+      mpv
 
       fluffychat
     ]
