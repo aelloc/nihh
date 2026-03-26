@@ -76,5 +76,6 @@ in
       inputs.wall-rs.packages.${system}.default
       inputs.sl.packages.${system}.default
       inputs.awzod.packages.${system}.default
+      inputs.uchar.packages.${system}.default
     ];
 }

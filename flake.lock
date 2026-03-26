@@ -1,5 +1,28 @@
 {
   "nodes": {
+    "android-nixpkgs": {
+      "inputs": {
+        "devshell": "devshell",
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "uchar",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773434018,
+        "narHash": "sha256-g/OmqUpsyUg3lw6QNkJudtsE2XVydkCKq724KIrr4no=",
+        "owner": "tadfisher",
+        "repo": "android-nixpkgs",
+        "rev": "b12e333a75f25fde82adad28acf47f57eb1b3dc4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tadfisher",
+        "repo": "android-nixpkgs",
+        "type": "github"
+      }
+    },
     "awzod": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -15,6 +38,28 @@
       "original": {
         "owner": "ae5259",
         "repo": "awzod",
+        "type": "github"
+      }
+    },
+    "devshell": {
+      "inputs": {
+        "nixpkgs": [
+          "uchar",
+          "android-nixpkgs",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1768818222,
+        "narHash": "sha256-460jc0+CZfyaO8+w8JNtlClB2n4ui1RbHfPTLkpwhU8=",
+        "owner": "numtide",
+        "repo": "devshell",
+        "rev": "255a2b1725a20d060f566e4755dbf571bbbb5f76",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "devshell",
         "type": "github"
       }
     },
@@ -98,6 +143,24 @@
         "type": "github"
       }
     },
+    "flake-parts_3": {
+      "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1772408722,
+        "narHash": "sha256-rHuJtdcOjK7rAHpHphUb1iCvgkU3GpfvicLMwwnfMT0=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f20dc5d9b8027381c474144ecabc9034d6a839a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -132,6 +195,24 @@
         "owner": "gytis-ivaskevicius",
         "repo": "flake-utils-plus",
         "rev": "3542fe9126dc492e53ddd252bb0260fe035f2c0f",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_3"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     },
@@ -248,6 +329,21 @@
         "type": "github"
       }
     },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1772328832,
+        "narHash": "sha256-e+/T/pmEkLP6BHhYjx6GmwP5ivonQQn0bJdH9YrRB+Q=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "c185c7a5e5dd8f9add5b2f8ebeff00888b070742",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1773840656,
@@ -311,6 +407,22 @@
     },
     "nixpkgs_6": {
       "locked": {
+        "lastModified": 1772523073,
+        "narHash": "sha256-3UWNhr9mHt3qAWHi/AhEgYltYMHyu/QUuDk4E13JfD8=",
+        "owner": "xinux-org",
+        "repo": "upstream",
+        "rev": "1d76938896f58994a1a86eedf3888aa555d8b225",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xinux-org",
+        "ref": "flutter-vodozemac",
+        "repo": "upstream",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
         "lastModified": 1767892417,
         "narHash": "sha256-dhhvQY67aboBk8b0/u0XB6vwHdgbROZT3fJAjyNh5Ww=",
         "owner": "nixos",
@@ -359,6 +471,7 @@
         "nur": "nur",
         "sl": "sl",
         "spicetify-nix": "spicetify-nix",
+        "uchar": "uchar",
         "wall-rs": "wall-rs"
       }
     },
@@ -429,9 +542,45 @@
         "type": "github"
       }
     },
+    "systems_3": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "uchar": {
+      "inputs": {
+        "android-nixpkgs": "android-nixpkgs",
+        "flake-parts": "flake-parts_3",
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1774435357,
+        "narHash": "sha256-BXKstvdOl0jNB+Vs65cyTzCmD4KCeD0outTv9L72nCU=",
+        "owner": "uchar-org",
+        "repo": "cross",
+        "rev": "dcdd8e2d58774d79df04568d1607224e89ceba8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "uchar-org",
+        "ref": "uchar/app/latest",
+        "repo": "cross",
+        "type": "github"
+      }
+    },
     "wall-rs": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1768219016,
