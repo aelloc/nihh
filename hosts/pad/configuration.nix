@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ pkgs
+, inputs
+, ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./power.nix
@@ -9,7 +12,16 @@
     ../../packages/system.nix
     # Shared configuration
     ../shared
+
+    inputs.nix-data.nixosModules.nix-data
   ];
+
+  programs.nix-data = {
+    enable = true;
+    systemconfig = "/home/sae/nihh/hosts/pad/configuration.nix";
+    flake = "/home/sae/nihh/flake.nix";
+    flakearg = "t34";
+  };
 
   services.fprintd.enable = true;
   services.fprintd.tod.enable = true;

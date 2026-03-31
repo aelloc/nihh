@@ -6,7 +6,7 @@
 , ...
 } @ inputs:
 nixpkgs.lib.nixosSystem {
-  specialArgs = { inherit inputs; };
+  specialArgs = { inherit inputs; } // { hostname = "t34"; };
 
   modules = [
     inputs.spicetify-nix.nixosModules.default
