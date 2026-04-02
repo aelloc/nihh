@@ -69,8 +69,8 @@
             action = wezterm.action.PaneSelect,
           },
 
-          { key = 'k', mods = 'ALT|SHIFT', action = act.ActivateTabRelative(-1) },
-          { key = 'j', mods = 'ALT|SHIFT', action = act.ActivateTabRelative(1) },
+          { key = 'j', mods = 'ALT|SHIFT', action = act.ActivateTabRelative(-1) },
+          { key = 'k', mods = 'ALT|SHIFT', action = act.ActivateTabRelative(1) },
         },
       }
       ";
