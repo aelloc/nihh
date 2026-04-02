@@ -17,6 +17,9 @@
       mf = "microfetch";
       ee = "ls --tree";
       lg = "lazygit";
+      ezit = "exit";
+      ez = "exit";
+      ex = "exit";
 
       die = "shutdown now";
       re = "reboot";
