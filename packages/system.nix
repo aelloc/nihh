@@ -46,6 +46,6 @@
 
     cloudflare-warp
   ] ++ [
-    inputs.uchar.packages.${system}.default
+    # inputs.uchar.packages.${system}.default
   ];
 }
