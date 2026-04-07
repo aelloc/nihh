@@ -1,9 +1,7 @@
-{ hostname, 
-... }:
-{
+{ hostname, ... }: {
   # hostname is derived from specialArgs in nixosConfiguration declaration file.
   # check nihh/hosts/${device}/default.nix
-  networking.hostName = hostname; 
+  networking.hostName = hostname;
 
   # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 

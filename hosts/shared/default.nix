@@ -1,9 +1,17 @@
-{ pkgs, ... }: {
+{ pkgs
+, inputs
+, ...
+}: {
   imports = [
     ./bootloader.nix
     # ./keyboard.nix
     ./network.nix
     ./spicetify.nix
+
+    inputs.xinux-modules.nixosModules.branding
+    inputs.xinux-modules.nixosModules.kernel
+    inputs.xinux-modules.nixosModules.xinux
+    inputs.xinux-modules.nixosModules.gnome
   ];
 
   programs.nix-index-database.comma = {
@@ -38,7 +46,7 @@
   };
 
   services.cloudflare-warp = {
-    enable = true;
+    enable = false;
   };
 
   # Essential user groups for kanata

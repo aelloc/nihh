@@ -1,5 +1,4 @@
-{ ...
-}:
+{ ... }:
 let
   files = builtins.readDir ../modules;
   file_names = builtins.attrNames files;

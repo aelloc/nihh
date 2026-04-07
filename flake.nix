@@ -5,6 +5,13 @@
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs.url = "github:xinux-org/nixpkgs/nixos-25.11";
 
+    xinux-nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-unstable&shallow=1";
+
+    xinux-modules = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=main&shallow=1";
+      inputs.xinux-nixpkgs.follows = "nixpkgs";
+    };
+
     nix-xl.url = "github:PassiveLemon/nix-xl";
 
     home-manager = {
