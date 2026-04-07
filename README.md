@@ -111,6 +111,14 @@ explanatory except `additions.nix`:
   lot and are too simple to configure anyways, such as `direnv`, `btop` and
   `zoxide`.
 
+### lib
+
+This folder contains some functions I have written in Nix to make my config a
+bit convenient.
+
+- `folder.nix` - constructs a list from elements inside `modules` folder in
+  order to make it easier to insert new files inside that folder.
+
 ### packages
 
 My packages folder have only 2 files, `home.nix` and `system.nix` with each of
