@@ -1,4 +1,5 @@
-{ ... }: {
+{ ...
+}: {
   programs.wezterm = {
     enable = true;
 
@@ -71,6 +72,8 @@
 
           { key = 'j', mods = 'ALT|SHIFT', action = act.ActivateTabRelative(-1) },
           { key = 'k', mods = 'ALT|SHIFT', action = act.ActivateTabRelative(1) },
+
+          { key = 'Backspace', mods = 'CTRL', action = act.SendKey { key = 'w', mods = 'CTRL' } },
         },
       }
       ";
