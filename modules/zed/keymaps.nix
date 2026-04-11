@@ -39,12 +39,10 @@
   {
     context = "Workspace";
     bindings = {
-      "alt-w h" = "workspace::ActivatePaneLeft";
-      "alt-w j" = "workspace::ActivatePaneDown";
-      "alt-w k" = "workspace::ActivatePaneUp";
-      "alt-w l" = "workspace::ActivatePaneRight";
-      "alt-w H" = "workspace::SwapPaneLeft";
-      "alt-w L" = "workspace::SwapPaneRight";
+      alt-h = "workspace::ActivatePaneLeft";
+      alt-j = "workspace::ActivatePaneDown";
+      alt-k = "workspace::ActivatePaneUp";
+      alt-l = "workspace::ActivatePaneRight";
       alt-i = "workspace::ToggleLeftDock";
       alt-t = "workspace::NewTerminal";
       cmd-t = "workspace::NewCenterTerminal";
