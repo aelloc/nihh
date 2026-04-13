@@ -7,11 +7,6 @@
 
     xinux-nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-unstable&shallow=1";
 
-    xinux-modules = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=main&shallow=1";
-      inputs.xinux-nixpkgs.follows = "nixpkgs";
-    };
-
     nix-xl.url = "github:PassiveLemon/nix-xl";
 
     home-manager = {
@@ -62,8 +57,6 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      systems.modules.nixos = with inputs; [ ];
-
       nixosConfigurations.sae = import ./hosts/rook inputs;
       nixosConfigurations.t34 = import ./hosts/pad inputs;
 
