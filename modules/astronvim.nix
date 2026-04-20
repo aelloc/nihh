@@ -4,6 +4,11 @@
     recursive = true;
   };
 
+  xdg.configFile.neovim = {
+    source = ../neovim;
+    recursive = true;
+  };
+  
   programs.neovim = {
     enable = true;
 
