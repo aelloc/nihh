@@ -11,14 +11,7 @@
   
   programs.neovim = {
     enable = true;
-
-    extraWrapperArgs = [
-      "--suffix"
-      "NVIM_APPNAME"
-      ":"
-      "astronvim"
-    ];
-
+    
     extraConfig = "";
 
     extraPackages = with pkgs; [

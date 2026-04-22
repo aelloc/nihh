@@ -71,6 +71,7 @@ in
       mpv
 
       fluffychat
+      poedit
     ]
     ++ [
       inputs.wall-rs.packages.${system}.default

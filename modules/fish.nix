@@ -30,6 +30,10 @@
       # NixOS related
       past = "nix profile history --profile /nix/var/nix/profiles/system";
       garbage = "sudo nix-collect-garbage --delete-old";
+
+      # Neovim
+      anv = "NVIM_APPNAME=astronvim nvim";
+      mnv = "NVIM_APPNAME=neovim nvim";
     };
 
     plugins = [
