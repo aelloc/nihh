@@ -13,7 +13,6 @@
     shellAliases = {
       zj = "zellij";
       ls = "exa --icons=always";
-      nv = "nvim";
       mf = "microfetch";
       ee = "ls --tree";
       lg = "lazygit";
@@ -32,7 +31,7 @@
       garbage = "sudo nix-collect-garbage --delete-old";
 
       # Neovim
-      anv = "NVIM_APPNAME=astronvim nvim";
+      nv = "NVIM_APPNAME=astronvim nvim";
       mnv = "NVIM_APPNAME=neovim nvim";
     };
 
