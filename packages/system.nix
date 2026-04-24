@@ -44,6 +44,7 @@
       gnome-screenshot
       gnome-tweaks
       gnome-extension-manager
+      libinput
 
       video-trimmer
       cloudflare-warp
