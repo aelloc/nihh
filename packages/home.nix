@@ -72,6 +72,8 @@ in
 
       fluffychat
       poedit
+      qbittorrent
+      libinput
     ]
     ++ [
       inputs.wall-rs.packages.${system}.default
