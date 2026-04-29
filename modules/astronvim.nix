@@ -8,10 +8,10 @@
     source = ../neovim;
     recursive = true;
   };
-  
+
   programs.neovim = {
     enable = true;
-    
+
     extraConfig = "";
 
     extraPackages = with pkgs; [

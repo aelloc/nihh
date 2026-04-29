@@ -48,8 +48,8 @@
 
       video-trimmer
       cloudflare-warp
-    ]
-    ++ [
-      inputs.uchar.packages.${system}.linux
     ];
+  # ++ [
+  #   inputs.uchar.packages.${system}.linux
+  # ];
 }
