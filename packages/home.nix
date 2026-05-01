@@ -45,7 +45,6 @@ in
       lsof # list open files
 
       # system tools
-      sysstat
       lm_sensors # for `sensors` command
       ethtool
       pciutils # lspci
