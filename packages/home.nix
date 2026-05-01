@@ -74,6 +74,13 @@ in
       poedit
       qbittorrent
       libinput
+
+      icon-library
+
+      cmus
+      mpd
+      ncmpcpp
+      jamesdsp
     ]
     ++ [
       inputs.wall-rs.packages.${system}.default
