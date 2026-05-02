@@ -71,11 +71,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1777348977,
-        "narHash": "sha256-9aKuCI5TKHKnP073B1VzBdLRLAQJE7R9rbJWaSFXr3M=",
+        "lastModified": 1777694573,
+        "narHash": "sha256-BKsIroRD/8didSwC/nPdRb8D+cGOYnwGXNlJRxDWgHE=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "a314975f42bfa9665bf77d1586ee0e123790ed27",
+        "rev": "db1ad4bdfce5bc45a9108167cf0788552e9fec28",
         "type": "gitlab"
       },
       "original": {
@@ -445,11 +445,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777367196,
-        "narHash": "sha256-80LA+zepVlxcx1/yJmi2IEjvZchKahY4kd54k+QF0Qs=",
+        "lastModified": 1777706069,
+        "narHash": "sha256-9OP1kuWgX2KgJilwVsINpeHFL69RVMQs1M+jJ8QenkE=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "0c1327302c071b6840cd9890eebe14e7aadc8e8f",
+        "rev": "11a5f91e263cbb8793a73d28720d77b5e0304fcf",
         "type": "github"
       },
       "original": {
@@ -584,11 +584,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1768219016,
-        "narHash": "sha256-D04SnlC0HnWwo8EYOLZV/Lpk7B4kXupI/SW7UHVye+k=",
+        "lastModified": 1777624490,
+        "narHash": "sha256-NrB6LoeF0nrVcyL2OiQvXXFQikzr1PbG4n3+8V2vLgU=",
         "owner": "ae5259",
         "repo": "wall-rs",
-        "rev": "15fa202e50d9f9da969fca33bb5ac9bec3fc9525",
+        "rev": "04b8c871607d14e00c6af1c031341da66c7f0706",
         "type": "github"
       },
       "original": {
@@ -622,10 +622,10 @@
     },
     "xinux-nixpkgs": {
       "locked": {
-        "lastModified": 1777096953,
-        "narHash": "sha256-8/podi8tNi3UVryFyNEX54SgjQODP0Y24Ek1+kSNE48=",
+        "lastModified": 1777535302,
+        "narHash": "sha256-Ckk7ATrUBv1R+ag63Etx/yZtHYDhf3JIVzCYcsqT2Ag=",
         "ref": "nixos-unstable",
-        "rev": "459e5fe503bda1346eaaf989d8568aed58488f78",
+        "rev": "c8275e8a7ae61034d3b29bfe9e8075c765fc6c49",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
