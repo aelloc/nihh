@@ -41,6 +41,7 @@
 
     uchar.url = "github:uchar-org/cross/uchar/app/latest";
     # https://github.com/uchar-org/cross/blob/uchar/app/latest/flake.nix
+    ayugram.url = "github:ndfined-crp/ayugram-desktop";
 
     wall-rs.url = "github:ae5259/wall-rs";
     awzod.url = "github:ae5259/awzod";

@@ -51,7 +51,7 @@ in
       usbutils # lsusb
 
       zoxide # for faster navigation
-      ayugram-desktop # telegram
+      # ayugram-desktop # telegram
       # spotify # spotify
       # yandex-music # yandex, idk why do i need it at all
       discord # same with yandex
@@ -85,5 +85,6 @@ in
       inputs.wall-rs.packages.${system}.default
       inputs.sl.packages.${system}.default
       inputs.awzod.packages.${system}.default
+      inputs.ayugram.packages.${system}.ayugram-desktop
     ];
 }
