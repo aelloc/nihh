@@ -74,13 +74,12 @@ in
       qbittorrent
       libinput
 
-      icon-library
-
       spek
       cmus
       mpd
       ncmpcpp
       jamesdsp
+      audacity
     ]
     ++ [
       inputs.wall-rs.packages.${system}.default
