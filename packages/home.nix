@@ -80,6 +80,7 @@ in
       ncmpcpp
       jamesdsp
       audacity
+      gnome-power-manager
     ]
     ++ [
       inputs.wall-rs.packages.${system}.default
