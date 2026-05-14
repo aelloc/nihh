@@ -1,6 +1,4 @@
-{ pkgs
-, ...
-}: {
+{ pkgs, ... }: {
   imports = [
     ./bootloader.nix
     # ./keyboard.nix
