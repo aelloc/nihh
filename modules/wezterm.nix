@@ -27,12 +27,34 @@
           {
             key = 'l',
             mods = 'SUPER',
-            action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
+            action = act.SplitPane {
+              direction = 'Right',
+              size = { Percent = 50 },
+            },
+          },
+          {
+            key = 'j',
+            mods = 'SUPER',
+            action = act.SplitPane {
+              direction = 'Down',
+              size = { Percent = 50 },
+            },
           },
           {
             key = 'k',
             mods = 'SUPER',
-            action = act.SplitVertical { domain = 'CurrentPaneDomain' },
+            action = act.SplitPane {
+              direction = 'Up',
+              size = { Percent = 50 },
+            },
+          },
+          {
+            key = 'h',
+            mods = 'SUPER',
+            action = act.SplitPane {
+              direction = 'Left',
+              size = { Percent = 50 },
+            },
           },
           {
             key = 't',

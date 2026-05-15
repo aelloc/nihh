@@ -27,6 +27,7 @@
   nix = {
     settings = {
       extra-substituters = [
+        "https://cache.nixos.org/"
         "https://cache.xinux.uz/"
         "https://cache.garnix.io"
         "https://ayugram-desktop.cachix.org"
