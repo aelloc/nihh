@@ -4,7 +4,7 @@ let
 in
 {
   programs.helix = {
-    enable = true;
+    enable = false;
 
     extraConfig = keybindings;
   };

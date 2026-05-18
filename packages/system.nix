@@ -34,6 +34,7 @@
     fzf
     fishPlugins.grc
     grc
+    evil-helix
 
     powertop
     tlp

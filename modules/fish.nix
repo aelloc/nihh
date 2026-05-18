@@ -3,6 +3,10 @@
     enable = true;
     interactiveShellInit = ''
       set -U fish_greeting
+
+      function gif
+          ffmpeg -i $argv
+      end
     '';
 
     # shellInitLast = ''
