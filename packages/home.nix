@@ -80,6 +80,9 @@ in
       ncmpcpp
       jamesdsp
       audacity
+      keymapp
+      google-chrome
+
       gnome-power-manager
     ]
     ++ [
