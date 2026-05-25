@@ -20,6 +20,8 @@
     inputs.nix-data.nixosModules.nix-data
   ];
 
+  services.power-profiles-daemon.enable = true;
+
   programs.nix-data = {
     enable = true;
     systemconfig = "/home/sae/nihh/hosts/rook/configuration.nix";

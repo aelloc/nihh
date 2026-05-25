@@ -1,6 +1,6 @@
 { ... }: {
   programs.lite-xl = {
-    enable = true;
+    enable = false;
 
     plugins = {
       enableList = [

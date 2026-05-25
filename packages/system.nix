@@ -25,6 +25,7 @@
     fish
     starship
     element-desktop
+    fractal
 
     # fish plugins
     fishPlugins.done
