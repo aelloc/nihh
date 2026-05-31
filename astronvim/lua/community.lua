@@ -10,6 +10,9 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.nix" },
+  { import = "astrocommunity.pack.nim" },
+  { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.typescript-deno" },
   { import = "astrocommunity.media.vim-wakatime" },
 
