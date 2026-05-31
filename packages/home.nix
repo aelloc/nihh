@@ -26,7 +26,7 @@ in
       onefetch # neofetch for git repository
       microfetch # minimal neofetch
       fastfetch # fast neofetch
-      neofetch # neofetch
+      # neofetch # neofetch
       # nix related
       # it provides the command `nom` works just like `nix`
       # with more details log output

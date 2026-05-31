@@ -23,6 +23,7 @@
       gdu
       lazygit
       python3
+      pyright
 
       lua-language-server
       luarocks

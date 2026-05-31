@@ -3,14 +3,14 @@
 
   inputs = {
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    nixpkgs.url = "github:xinux-org/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
     xinux-nixpkgs.url = "git+https://git.oss.uzinfocom.uz/xinux/nixpkgs?ref=nixos-unstable&shallow=1";
 
     nix-xl.url = "github:PassiveLemon/nix-xl";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -43,9 +43,9 @@
     # https://github.com/uchar-org/cross/blob/uchar/app/latest/flake.nix
     ayugram.url = "github:ndfined-crp/ayugram-desktop";
 
-    wall-rs.url = "github:ae5259/wall-rs";
-    awzod.url = "github:ae5259/awzod";
-    sl.url = "github:ae5259/statline";
+    wall-rs.url = "github:aelloc/wall-rs";
+    awzod.url = "github:aelloc/awzod";
+    sl.url = "github:aelloc/statline";
   };
 
   outputs =
