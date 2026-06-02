@@ -48,6 +48,7 @@
 
     video-trimmer
     cloudflare-warp
+    pavucontrol
   ];
   # ++ [
   #   inputs.uchar.packages.${system}.linux
