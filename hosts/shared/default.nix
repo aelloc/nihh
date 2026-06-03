@@ -70,7 +70,7 @@
   };
 
   services.cloudflare-warp = {
-    enable = true;
+    enable = false;
   };
 
   # Essential user groups for kanata

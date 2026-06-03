@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
   xdg.configFile.astronvim = {
     source = ../astronvim;
     recursive = true;
@@ -11,6 +11,7 @@
 
   programs.neovim = {
     enable = true;
+    package = inputs.nixpkgs-nv.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim-unwrapped;
 
     extraConfig = "";
 
@@ -26,9 +27,11 @@
       pyright
 
       lua-language-server
+      lua5_1
       luarocks
       stylua
 
+      tectonic
       tree-sitter
     ];
   };
