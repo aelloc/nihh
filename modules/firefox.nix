@@ -1,7 +1,7 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
   programs.firefox = {
     enable = true;
-    profiles.default = {
+    profiles.aelloc = {
       id = 0;
       name = "Default";
       settings = {
@@ -10,12 +10,12 @@
       extensions = {
         force = true;
 
-        packages = with pkgs.nur.repos.rycee.firefox-addons; [
+        packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
           ublock-origin
           darkreader
           sidebery
           vimium
-          youtube-recommended-videos
+          # youtube-recommended-videos
         ];
 
         settings = {

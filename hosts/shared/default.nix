@@ -119,16 +119,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Install firefox.
-  programs.firefox = {
-    enable = true;
-    policies = {
-      ExtensionSettings = {
-        default_area = "navbar";
-      };
-    };
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
