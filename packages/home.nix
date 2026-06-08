@@ -90,5 +90,7 @@ in
       inputs.sl.packages.${system}.default
       inputs.awzod.packages.${system}.default
       inputs.ayugram.packages.${system}.ayugram-desktop
+      inputs.spotiflac.packages.${system}.default
+      inputs.xs.packages.${system}.xinux-settings
     ];
 }

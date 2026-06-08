@@ -44,6 +44,8 @@
     # https://github.com/uchar-org/cross/blob/uchar/app/latest/flake.nix
     ayugram.url = "github:ndfined-crp/ayugram-desktop";
 
+    xs.url = "git+https://git.oss.uzinfocom.uz/akmal/settings";
+    spotiflac.url = "github:Superredstone/spotiflac-cli";
     wall-rs.url = "github:aelloc/wall-rs";
     awzod.url = "github:aelloc/awzod";
     sl.url = "github:aelloc/statline";

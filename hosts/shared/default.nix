@@ -116,6 +116,9 @@
   };
   services.flatpak.enable = true;
 
+  # Enable a better bluetooth UI application
+  services.blueman.enable = true;
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
