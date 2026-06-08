@@ -40,6 +40,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    xinux-settings.url = "git+https://git.oss.uzinfocom.uz/akmal/settings.git";
+
     uchar.url = "github:uchar-org/cross/uchar/app/latest";
     # https://github.com/uchar-org/cross/blob/uchar/app/latest/flake.nix
     ayugram.url = "github:ndfined-crp/ayugram-desktop";

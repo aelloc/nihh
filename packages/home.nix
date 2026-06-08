@@ -92,5 +92,6 @@ in
       inputs.ayugram.packages.${system}.ayugram-desktop
       inputs.spotiflac.packages.${system}.default
       inputs.xs.packages.${system}.xinux-settings
+      inputs.xinux-settings.packages.${system}.xinux-settings
     ];
 }

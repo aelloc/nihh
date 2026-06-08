@@ -90,11 +90,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1780200155,
-        "narHash": "sha256-cKpqEvRqxnCbp/2ZVczMHws31Qh4D/HTEuanWuJmySk=",
+        "lastModified": 1780545772,
+        "narHash": "sha256-U+9vHXr8IitVuQ78yhZclUGgmwLnaBIRAPQlw44y8bU=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "d29c0c2692ced897777eca19c9bab1b34be0e0d6",
+        "rev": "89c5264d8ee0d69abc87723ae238563e5c3355c0",
         "type": "gitlab"
       },
       "original": {
@@ -327,7 +327,11 @@
         "flake-compat": "flake-compat_3",
         "gitignore": "gitignore",
         "nixpkgs": [
+<<<<<<< Updated upstream
           "xs",
+=======
+          "xinux-settings",
+>>>>>>> Stashed changes
           "xinux-lib",
           "nixpkgs"
         ]
@@ -349,7 +353,11 @@
     "gitignore": {
       "inputs": {
         "nixpkgs": [
+<<<<<<< Updated upstream
           "xs",
+=======
+          "xinux-settings",
+>>>>>>> Stashed changes
           "xinux-lib",
           "git-hooks",
           "nixpkgs"
@@ -376,11 +384,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779726825,
-        "narHash": "sha256-RUkMrREjKDQrA+dA9+xZviGAxM5W1aVdyOr/bSYpHrE=",
+        "lastModified": 1780361225,
+        "narHash": "sha256-wnV9ttf4fPWNonBIQmvlrSlNpQYgx5HgWWd007mwIFA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b179bde238977f7d4454fc770b1a727eaf55111c",
+        "rev": "e28654b71096e08c019d4861ca26acb646f583d8",
         "type": "github"
       },
       "original": {
@@ -437,11 +445,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1779601943,
-        "narHash": "sha256-6cRmBBC7Anf9oMjgoYMcRDEPb5cBjwulb+X/3vkDd+Y=",
+        "lastModified": 1780554789,
+        "narHash": "sha256-iB++mljTiBR7RpTouxOwss4D8HNmV+00X/+tzINji0g=",
         "owner": "PassiveLemon",
         "repo": "nix-xl",
-        "rev": "deb6773decedda15b37ca4629b5620f3529ae5f2",
+        "rev": "349918fceb808a698f4c64604d2a6eed74a72e2a",
         "type": "github"
       },
       "original": {
@@ -455,11 +463,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1780065812,
-        "narHash": "sha256-SCSLUKBmwlSLGQ8Xbr8PjRFtiHNk0l9ktqkcmqdBkfE=",
+        "lastModified": 1780310866,
+        "narHash": "sha256-fPBRVf6A5xlACYcOI59shGrjURuvwu0lRsDoSCEXt/I=",
         "owner": "nixos",
         "repo": "nixos-hardware",
-        "rev": "b76b5639c0593e0aeb0b5879ad62d4b30596c144",
+        "rev": "4ed851c979641e28597a05086332d75cdc9e395f",
         "type": "github"
       },
       "original": {
@@ -533,6 +541,7 @@
     },
     "nixpkgs_10": {
       "locked": {
+<<<<<<< Updated upstream
         "lastModified": 1767892417,
         "narHash": "sha256-dhhvQY67aboBk8b0/u0XB6vwHdgbROZT3fJAjyNh5Ww=",
         "owner": "nixos",
@@ -549,6 +558,8 @@
     },
     "nixpkgs_11": {
       "locked": {
+=======
+>>>>>>> Stashed changes
         "lastModified": 1779357205,
         "narHash": "sha256-cCO8aTqss5x9Ky8GWkpY0Hy5fyTZEbtifSUV8QjSzic=",
         "ref": "nixos-unstable",
@@ -611,11 +622,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1780051219,
-        "narHash": "sha256-WnxzG4x47uCgjz+uD+vOzbF+Qid+hKyYdJWbduA9w7g=",
+        "lastModified": 1780453794,
+        "narHash": "sha256-bXMRa9VTsHSPXL4Cw8R6JJLQeY3Y/IP4+YJCYVmQ7FY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e8e446a361172fe838243958325845d0b845c5e5",
+        "rev": "6b316287bae2ee04c9b93c8c858d930fd07d7338",
         "type": "github"
       },
       "original": {
@@ -692,11 +703,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780241710,
-        "narHash": "sha256-vwBWr9FIyts4mkmQKH7kMx4c5Yj7NAx0poZD/vRDnoc=",
+        "lastModified": 1780578302,
+        "narHash": "sha256-4/aTO/3cjw8qmzrqTZ5F66lY9CAs4vuLM/gZJVr7Rvc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "c44d2ddd84f86ebb528c721ccf39135d46bffc03",
+        "rev": "bd971367e4dae47ec814fa4457bea5ac2f5733e8",
         "type": "github"
       },
       "original": {
@@ -724,7 +735,11 @@
         "uchar": "uchar",
         "wall-rs": "wall-rs",
         "xinux-nixpkgs": "xinux-nixpkgs",
+<<<<<<< Updated upstream
         "xs": "xs"
+=======
+        "xinux-settings": "xinux-settings"
+>>>>>>> Stashed changes
       }
     },
     "sl": {
@@ -751,11 +766,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1780213729,
-        "narHash": "sha256-rdeBztPA6tiKp6gG4ihZAzeYGC9mYa2tAU4UIOLcZM0=",
+        "lastModified": 1780422259,
+        "narHash": "sha256-dWGk4SEdI189kQW5cE4Uo1Mc+P+kQEdgMcyMgTtmQOA=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "c679f3fa9fbe86903486a8f7ad71f99e26481d71",
+        "rev": "8414bbf2fcc7bc0a22c675e498e3c7365c1aec0a",
         "type": "github"
       },
       "original": {
@@ -867,6 +882,7 @@
       "inputs": {
         "nixpkgs": [
           "xs",
+          "xinux-settings",
           "xinux-lib",
           "nixpkgs"
         ]
@@ -954,7 +970,11 @@
         "flake-utils-plus": "flake-utils-plus_2",
         "git-hooks": "git-hooks",
         "nixpkgs": [
+<<<<<<< Updated upstream
           "xs",
+=======
+          "xinux-settings",
+>>>>>>> Stashed changes
           "nixpkgs"
         ],
         "treefmt-nix": "treefmt-nix"
@@ -977,10 +997,10 @@
     },
     "xinux-nixpkgs": {
       "locked": {
-        "lastModified": 1779560665,
-        "narHash": "sha256-tpyBcxPpcQb8ukyNF7DoCwfSY3VPsxHoYwj00Cayv5o=",
+        "lastModified": 1780243769,
+        "narHash": "sha256-x5UQuRsH3MqI0U9afaXSNqzTPSeZlRLvFAav2Ux1pNw=",
         "ref": "nixos-unstable",
-        "rev": "64c08a7ca051951c8eae34e3e3cb1e202fe36786",
+        "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
         "shallow": true,
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
@@ -992,9 +1012,15 @@
         "url": "https://git.oss.uzinfocom.uz/xinux/nixpkgs"
       }
     },
+<<<<<<< Updated upstream
     "xs": {
       "inputs": {
         "nixpkgs": "nixpkgs_11",
+=======
+    "xinux-settings": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_10",
+>>>>>>> Stashed changes
         "xinux-lib": "xinux-lib_2"
       },
       "locked": {
@@ -1004,11 +1030,19 @@
         "rev": "6bcebf2f081fb2bc34ece0ad4a93a849c4f63781",
         "revCount": 315,
         "type": "git",
+<<<<<<< Updated upstream
         "url": "https://git.oss.uzinfocom.uz/akmal/settings"
       },
       "original": {
         "type": "git",
         "url": "https://git.oss.uzinfocom.uz/akmal/settings"
+=======
+        "url": "https://git.oss.uzinfocom.uz/akmal/settings.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.oss.uzinfocom.uz/akmal/settings.git"
+>>>>>>> Stashed changes
       }
     }
   },
