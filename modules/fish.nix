@@ -5,11 +5,6 @@
       set -U fish_greeting
     '';
 
-    # shellInitLast = ''
-    #   awzod random
-    #   echo \n
-    # '';
-
     shellAliases = {
       zj = "zellij";
       ls = "exa --icons=always";
