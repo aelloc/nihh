@@ -9,8 +9,8 @@
     };
 
     font = {
-      name = "Iosevka";
-      package = pkgs.iosevka;
+      name = "Maple Mono Medium";
+      package = pkgs.maple-mono.truetype;
     };
   };
 }

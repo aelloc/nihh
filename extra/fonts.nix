@@ -5,7 +5,6 @@
     packages = with pkgs; [
       liberation_ttf
       times-newer-roman
-      ubuntu-classic
       noto-fonts
       noto-fonts-color-emoji
       noto-fonts-cjk-sans
@@ -18,6 +17,7 @@
       hack-font
       font-awesome
       iosevka
+      maple-mono.truetype
     ];
 
     fontconfig = {
