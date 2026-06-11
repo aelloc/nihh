@@ -7,7 +7,7 @@
       local act = wezterm.action
 
       return {
-        font = wezterm.font 'Maple Mono',
+        font = wezterm.font 'Maple Mono Normal NL NF Medium',
         color_scheme = 'gruvbox_material_dark_hard',
         color_schemes = {
           ['gruvbox_material_dark_hard'] = {

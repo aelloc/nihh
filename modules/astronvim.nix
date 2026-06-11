@@ -4,11 +4,6 @@
     recursive = true;
   };
 
-  xdg.configFile.neovim = {
-    source = ../neovim;
-    recursive = true;
-  };
-
   programs.neovim = {
     enable = true;
     package = inputs.nixpkgs-nv.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim-unwrapped;

@@ -17,7 +17,7 @@
       hack-font
       font-awesome
       iosevka
-      maple-mono.truetype
+      maple-mono.NormalNL-NF
     ];
 
     fontconfig = {
