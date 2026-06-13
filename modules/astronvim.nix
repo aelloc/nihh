@@ -4,6 +4,11 @@
     recursive = true;
   };
 
+  xdg.configFile.kickstart = {
+    source = ../kickstart;
+    recursive = true;
+  };
+
   programs.neovim = {
     enable = true;
     package = inputs.nixpkgs-nv.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim-unwrapped;
