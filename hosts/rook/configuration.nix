@@ -18,6 +18,8 @@
     ../shared
 
     inputs.nix-data.nixosModules.nix-data
+    inputs.xinux-modules.nixosModules.efiboot # or biosboot
+    inputs.xinux-modules.nixosModules.meta
   ];
 
   services.power-profiles-daemon.enable = true;

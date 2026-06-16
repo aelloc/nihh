@@ -19,5 +19,6 @@ return {
 
   { import = "astrocommunity.colorscheme.gruvbox-baby" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.search.grug-far-nvim" },
   -- import/override with your plugins folder
 }

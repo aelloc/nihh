@@ -55,7 +55,7 @@
     settings = {
       extra-substituters = [
         "https://cache.nixos.org/"
-        "https://cache.xinux.uz/"
+        "https://cache.xinux.uz/?priority=100"
         "https://cache.garnix.io"
         "https://ayugram-desktop.cachix.org"
       ];
@@ -65,7 +65,7 @@
       ];
       extra-trusted-public-keys = [ "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" ];
 
-      experimental-features = "nix-command flakes";
+      experimental-features = "nix-command flakes pipe-operators";
     };
   };
 
@@ -90,6 +90,9 @@
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
+
+  # services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.desktopManager.cinnamon.enable = true;
   # Enable networking
   networking.networkmanager.enable = true;
 

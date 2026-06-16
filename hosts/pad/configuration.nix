@@ -14,6 +14,7 @@
     ../shared
 
     inputs.nix-data.nixosModules.nix-data
+
   ];
 
   programs.nix-data = {
