@@ -34,6 +34,8 @@ in
 
       # productivity
       glow # markdown previewer in terminal
+      emacs # better than nvim :3
+      putty
 
       btop # replacement of htop/nmon
       iotop # io monitoring
