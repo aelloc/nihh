@@ -84,6 +84,7 @@ in
       google-chrome
 
       gnome-power-manager
+      ngrok
     ]
     ++ [
       inputs.wall-rs.packages.${system}.default

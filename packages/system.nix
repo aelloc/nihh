@@ -50,6 +50,11 @@
     cloudflare-warp
     pavucontrol
     spotiflac
+    adwaita-icon-theme
+    hicolor-icon-theme
+
+    vanilla-dmz
+    bibata-cursors
   ];
   # ++ [
   #   inputs.uchar.packages.${system}.linux

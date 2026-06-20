@@ -28,7 +28,7 @@
     };
 
     xinux-modules = {
-        url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=main&shallow=1";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=main&shallow=1";
     };
 
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";

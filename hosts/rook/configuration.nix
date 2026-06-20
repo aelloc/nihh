@@ -16,11 +16,12 @@
 
     # Shared configuration
     ../shared
+    ./ssh.nix
 
     inputs.nix-data.nixosModules.nix-data
-    inputs.xinux-modules.nixosModules.efiboot # or biosboot
-    inputs.xinux-modules.nixosModules.meta
   ];
+
+  networking.firewall.allowedTCPPorts = [ 22139 ];
 
   services.power-profiles-daemon.enable = true;
 

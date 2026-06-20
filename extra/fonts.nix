@@ -18,6 +18,7 @@
       font-awesome
       iosevka
       maple-mono.NormalNL-NF
+      inter
     ];
 
     fontconfig = {
