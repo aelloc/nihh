@@ -1,8 +1,6 @@
-{ ... }:
-let
+{...}: let
   keybindings = builtins.readFile ./keybindings.toml;
-in
-{
+in {
   programs.helix = {
     enable = true;
 

@@ -1,14 +1,16 @@
-{ inputs, ... }:
-let
-  modules = import ../lib/folder.nix { };
-in
-{
+{inputs, ...}: let
+  modules = import ../lib/folder.nix {};
+in {
   imports =
     modules.modules
     ++ [
       ../packages/home.nix
       inputs.nix-xl.homeModules.nix-xl
+      inputs.zen-browser.homeModules.beta
     ];
+
+  # modules = [
+  # ];
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

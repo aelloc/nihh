@@ -1,4 +1,8 @@
-{ inputs, pkgs, ... }: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   xdg.configFile.astronvim = {
     source = ../astronvim;
     recursive = true;

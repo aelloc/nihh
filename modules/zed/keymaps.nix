@@ -1,4 +1,4 @@
-{ ... }: [
+{...}: [
   {
     context = "VimControl && !menu";
     bindings = {

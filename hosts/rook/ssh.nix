@@ -1,7 +1,7 @@
-{ ... }: {
+{...}: {
   services.openssh = {
     enable = true;
-    ports = [ 22139 ];
+    ports = [22139];
     openFirewall = true;
     settings = {
       PasswordAuthentication = true;

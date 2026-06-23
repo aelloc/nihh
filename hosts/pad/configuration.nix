@@ -1,6 +1,7 @@
-{ pkgs
-, inputs
-, ...
+{
+  pkgs,
+  inputs,
+  ...
 }: {
   imports = [
     ./hardware-configuration.nix
@@ -14,7 +15,6 @@
     ../shared
 
     inputs.nix-data.nixosModules.nix-data
-
   ];
 
   programs.nix-data = {
@@ -24,7 +24,7 @@
     flakearg = "t34";
   };
 
-  boot.supportedFilesystems = [ "ntfs" "exfat" "vfat" ];
+  boot.supportedFilesystems = ["ntfs" "exfat" "vfat"];
 
   services.fprintd.enable = true;
   services.fprintd.tod.enable = true;

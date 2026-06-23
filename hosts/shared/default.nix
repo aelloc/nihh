@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     ./bootloader.nix
     # ./keyboard.nix
@@ -63,7 +67,7 @@
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
         "ayugram-desktop.cachix.org:AZ5EqHrJsAKL5YkZYLPEsb1FdD9QlypUwQ0REcJftgA="
       ];
-      extra-trusted-public-keys = [ "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" ];
+      extra-trusted-public-keys = ["cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="];
 
       experimental-features = "nix-command flakes pipe-operators";
     };
@@ -74,8 +78,8 @@
   };
 
   # Essential user groups for kanata
-  users.groups.uinput = { };
-  users.groups.input = { };
+  users.groups.uinput = {};
+  users.groups.input = {};
 
   # Set your time zone.
   time.timeZone = "Asia/Tashkent";
@@ -93,8 +97,6 @@
 
   # services.xserver.displayManager.lightdm.enable = true;
   # services.xserver.desktopManager.cinnamon.enable = true;
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -145,12 +147,12 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+    extraPortals = [pkgs.xdg-desktop-portal-gnome];
     config.common.default = "gnome";
   };
 
   programs.steam = {
-    enable = false;
+    enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };

@@ -3,8 +3,9 @@
   pkgs,
   ...
 }: {
-  programs.firefox = {
+  programs.zen-browser = {
     enable = true;
+
     profiles.aelloc = {
       id = 0;
       name = "Default";

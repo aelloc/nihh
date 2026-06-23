@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   use_system_prompts = false;
   use_system_path_prompts = false;
   disable_ai = true;

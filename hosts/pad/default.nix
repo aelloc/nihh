@@ -1,12 +1,13 @@
-{ nixpkgs
-, home-manager
-, nixos-hardware
-, nur
-, nid
-, ...
+{
+  nixpkgs,
+  home-manager,
+  nixos-hardware,
+  nur,
+  nid,
+  ...
 } @ inputs:
 nixpkgs.lib.nixosSystem {
-  specialArgs = { inherit inputs; } // { hostname = "t34"; };
+  specialArgs = {inherit inputs;} // {hostname = "t34";};
 
   modules = [
     inputs.spicetify-nix.nixosModules.default
@@ -29,7 +30,7 @@ nixpkgs.lib.nixosSystem {
         # useUserPackages = true;
         # backupFileExtension = "backup";
 
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {inherit inputs;};
         users.t34 = import ../../home-manager/pad-home.nix;
       };
     }

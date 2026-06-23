@@ -1,11 +1,12 @@
-{ nixpkgs
-, home-manager
-, nur
-, nid
-, ...
+{
+  nixpkgs,
+  home-manager,
+  nur,
+  nid,
+  ...
 } @ inputs:
 nixpkgs.lib.nixosSystem {
-  specialArgs = { inherit inputs; } // { hostname = "sae"; };
+  specialArgs = {inherit inputs;} // {hostname = "sae";};
   modules = [
     inputs.spicetify-nix.nixosModules.default
     ./configuration.nix
@@ -25,7 +26,7 @@ nixpkgs.lib.nixosSystem {
         # useUserPackages = true;
         # backupFileExtension = "backup";
 
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {inherit inputs;};
         users.sae = import ../../home-manager/pc-home.nix;
       };
     }

@@ -38,6 +38,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+
     # nix-index-database
     nid = {
       url = "github:nix-community/nix-index-database";
@@ -57,29 +66,29 @@
     sl.url = "github:aelloc/statline";
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , ...
-    } @ inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
-    in
-    {
-      nixosConfigurations.sae = import ./hosts/rook inputs;
-      nixosConfigurations.t34 = import ./hosts/pad inputs;
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {inherit system;};
+  in {
+    nixosConfigurations.sae = import ./hosts/rook inputs;
+    nixosConfigurations.t34 = import ./hosts/pad inputs;
 
-      formatter.${system} = pkgs.nixpkgs-fmt;
-      devShells.${system}.default = pkgs.mkShell {
-        packages = with pkgs; [
-          self.formatter.${system}
+    formatter.${system} = pkgs.alejandra;
+    # formatter.${system} = pkgs.nixpkgs-fmt;
+    devShells.${system}.default = pkgs.mkShell {
+      packages = with pkgs; [
+        self.formatter.${system}
+        alejandra
 
-          nixd
-          statix
-          deadnix
-          nixfmt-tree
-        ];
-      };
+        nixd
+        statix
+        deadnix
+        nixfmt-tree
+      ];
     };
+  };
 }

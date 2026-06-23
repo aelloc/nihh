@@ -1,11 +1,10 @@
-{ inputs
-, pkgs
-, ...
-}:
-let
-  system = pkgs.stdenv.hostPlatform.system;
-in
 {
+  inputs,
+  pkgs,
+  ...
+}: let
+  system = pkgs.stdenv.hostPlatform.system;
+in {
   home.packages = with pkgs;
     [
       # archives
