@@ -56,6 +56,7 @@
 
     vanilla-dmz
     bibata-cursors
+    thunderbird
   ];
   # ++ [
   #   inputs.uchar.packages.${system}.linux
