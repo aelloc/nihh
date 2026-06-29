@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.vscode = {
-    enable = false;
+    enable = true;
     mutableExtensionsDir = true;
 
     profiles.default = {
