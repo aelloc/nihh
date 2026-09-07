@@ -83,7 +83,6 @@
     gitMinimal
     vim
     alejandra
-    zsh
     lazygit
   ];
 

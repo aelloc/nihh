@@ -138,7 +138,6 @@
   nixpkgs.config.allowBroken = true;
 
   home-manager.backupFileExtension = "backup";
-  # programs.zsh.enable = true;
   programs.fish.enable = true;
   # Weekly garbage collection
   nix.gc = {

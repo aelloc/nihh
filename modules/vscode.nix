@@ -14,6 +14,7 @@
         jnoortheen.nix-ide
         tamasfe.even-better-toml
         vscodevim.vim
+        biomejs.biome
 
         mkhl.direnv
         kamadorueda.alejandra
