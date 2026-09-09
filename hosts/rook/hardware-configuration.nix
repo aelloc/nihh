@@ -6,7 +6,8 @@
   lib,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -19,11 +20,11 @@
     "usb_storage"
     "sd_mod"
   ];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
-  boot.extraModulePackages = [];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ];
+  boot.extraModulePackages = [ ];
 
-  boot.kernelParams = ["video=DP-1:3440x1440@180"];
+  boot.kernelParams = [ "video=DP-1:3440x1440@180" ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/2c4dcd22-436e-4b4e-ad63-acd85b501cce";
@@ -40,7 +41,7 @@
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/59209895-91cb-4371-96d0-536e40efb7c2";}
+    { device = "/dev/disk/by-uuid/59209895-91cb-4371-96d0-536e40efb7c2"; }
   ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

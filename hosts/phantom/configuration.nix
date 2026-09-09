@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
 
@@ -13,7 +13,11 @@
     ./gpu.nix
   ];
 
-  boot.supportedFilesystems = ["ntfs" "exfat" "vfat"];
+  boot.supportedFilesystems = [
+    "ntfs"
+    "exfat"
+    "vfat"
+  ];
 
   services.openssh.enable = true;
 

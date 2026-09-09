@@ -2,7 +2,8 @@
   modulesPath,
   pkgs,
   ...
-} @ args: {
+}@args:
+{
   imports = [
     ./ngi.nix
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -34,7 +35,11 @@
       "209.126.15.53"
     ];
 
-    firewall.allowedTCPPorts = [22 443 80];
+    firewall.allowedTCPPorts = [
+      22
+      443
+      80
+    ];
   };
 
   nix = {
@@ -61,12 +66,15 @@
     };
   };
 
-  users.users.nginx.extraGroups = ["acme"];
+  users.users.nginx.extraGroups = [ "acme" ];
 
   users.users.razor = {
     isNormalUser = true;
     description = "razoooooor!!!";
-    extraGroups = ["wheel" "docker"];
+    extraGroups = [
+      "wheel"
+      "docker"
+    ];
     shell = pkgs.fish;
 
     home = "/home/razor";
@@ -91,11 +99,10 @@
     rootless.enable = true;
   };
 
-  users.users.root.openssh.authorizedKeys.keys =
-    [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhQlu6jHF2BLrNvfKy+XXjneqnE3Rz9B2ls6fvw+pWw isakulovdev@gmail.com"
-    ]
-    ++ (args.extraPublicKeys or []);
+  users.users.root.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINhQlu6jHF2BLrNvfKy+XXjneqnE3Rz9B2ls6fvw+pWw isakulovdev@gmail.com"
+  ]
+  ++ (args.extraPublicKeys or [ ]);
 
   system.stateVersion = "26.05";
 }

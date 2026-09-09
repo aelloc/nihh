@@ -3,9 +3,14 @@
   home-manager,
   nur,
   ...
-} @ inputs:
+}@inputs:
 nixpkgs.lib.nixosSystem {
-  specialArgs = {inherit inputs;} // {hostname = "phantom";};
+  specialArgs = {
+    inherit inputs;
+  }
+  // {
+    hostname = "phantom";
+  };
 
   modules = [
     ./configuration.nix
@@ -23,7 +28,7 @@ nixpkgs.lib.nixosSystem {
         ];
         useGlobalPkgs = true;
 
-        extraSpecialArgs = {inherit inputs;};
+        extraSpecialArgs = { inherit inputs; };
         users.phantom = import ../../home-manager/tuff-home.nix;
       };
     }

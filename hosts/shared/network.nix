@@ -1,4 +1,4 @@
-{hostname, ...}: {
+{ hostname, ... }: {
   # hostname is derived from specialArgs in nixosConfiguration declaration file.
   # check nihh/hosts/${device}/default.nix
 
@@ -9,7 +9,7 @@
   # networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   networking.hosts = {
-    "91.212.89.25" = ["git.oss.uzinfocom.uz"];
+    "91.212.89.25" = [ "git.oss.uzinfocom.uz" ];
   };
 
   networking.useDHCP = false;

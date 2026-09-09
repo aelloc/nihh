@@ -31,28 +31,30 @@
     humble.url = "github:aelloc/humble";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {inherit system;};
-  in {
-    nixosConfigurations.sae = import ./hosts/rook inputs;
-    nixosConfigurations.razor = import ./hosts/razor inputs;
-    nixosConfigurations.phantom = import ./hosts/phantom inputs;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
+      nixosConfigurations.sae = import ./hosts/rook inputs;
+      nixosConfigurations.razor = import ./hosts/razor inputs;
+      nixosConfigurations.phantom = import ./hosts/phantom inputs;
 
-    formatter.${system} = pkgs.alejandra;
-    devShells.${system}.default = pkgs.mkShell {
-      packages = with pkgs; [
-        self.formatter.${system}
-        alejandra
+      formatter.${system} = pkgs.nixfmt-tree;
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          self.formatter.${system}
 
-        nixd
-        statix
-        deadnix
-      ];
+          nixd
+          statix
+          deadnix
+        ];
+      };
     };
-  };
 }

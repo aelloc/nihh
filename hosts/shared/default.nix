@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     ./bootloader.nix
     ./network.nix
@@ -62,7 +63,7 @@
         "ayugram-desktop.cachix.org:AZ5EqHrJsAKL5YkZYLPEsb1FdD9QlypUwQ0REcJftgA="
       ];
 
-      extra-substituters = ["https://tg-owt.cachix.org"];
+      extra-substituters = [ "https://tg-owt.cachix.org" ];
       extra-trusted-public-keys = [
         "tg-owt.cachix.org-1:lp0BukIhSK3EIyLcDhDZ5zABgT48nmNp6t4SnZ0wr8w="
       ];
@@ -82,15 +83,15 @@
     enable = true;
   };
 
-  systemd.services.cloudflare-warp.wantedBy = lib.mkForce [];
+  systemd.services.cloudflare-warp.wantedBy = lib.mkForce [ ];
 
   services.tailscale = {
     enable = true;
   };
 
   # Essential user groups for kanata
-  users.groups.uinput = {};
-  users.groups.input = {};
+  users.groups.uinput = { };
+  users.groups.input = { };
 
   # Set your time zone.
   time.timeZone = "Asia/Tashkent";
@@ -156,7 +157,11 @@
       xdg-desktop-portal-gtk
     ];
     wlr.enable = true;
-    config.common.default = ["wlr" "gtk" "portal"];
+    config.common.default = [
+      "wlr"
+      "gtk"
+      "portal"
+    ];
   };
 
   programs.steam = {

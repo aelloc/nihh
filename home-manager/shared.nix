@@ -1,11 +1,11 @@
-{...}: let
-  modules = import ../lib/folder.nix {};
-in {
-  imports =
-    modules.modules
-    ++ [
-      ../packages/home.nix
-    ];
+{ ... }:
+let
+  modules = import ../lib/folder.nix { };
+in
+{
+  imports = modules.modules ++ [
+    ../packages/home.nix
+  ];
   # modules = [
   # ];
 

@@ -2,11 +2,14 @@
   inputs,
   pkgs,
   ...
-}: let
+}:
+let
   system = pkgs.stdenv.hostPlatform.system;
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {inherit system;};
-in {
-  home.packages = with pkgs;
+  nixpkgs-unstable = import inputs.nixpkgs-unstable { inherit system; };
+in
+{
+  home.packages =
+    with pkgs;
     [
       # archives
       zip
