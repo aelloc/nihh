@@ -4,7 +4,7 @@
   disable_ai = true;
   vim_mode = true;
   base_keymap = "VSCode";
-  buffer_font_family = "Maple Mono";
+  buffer_font_family = "Maple Mono Normal NL NF";
   # buffer_font_family = "Maple Mono Normal NL NF Medium";
   buffer_font_features = {
     calt = true;
