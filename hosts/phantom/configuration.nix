@@ -41,6 +41,7 @@
       "wheel"
       "uinput"
       "input"
+      "docker"
     ];
     shell = pkgs.fish;
     packages = [

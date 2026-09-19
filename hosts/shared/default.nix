@@ -9,6 +9,7 @@
     ./network.nix
     ./spicetify.nix
     # ./mullvad.nix
+    ./docker.nix
   ];
 
   services.gnome.gnome-keyring.enable = pkgs.lib.mkForce false;
