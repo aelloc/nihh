@@ -56,6 +56,8 @@ in
 
       tigervnc
       # mullvad-vpn
+      gradia
+      feedr
     ]
     ++ (with nixpkgs-unstable; [
       ayugram-desktop
