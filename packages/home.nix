@@ -58,6 +58,7 @@ in
       # mullvad-vpn
       gradia
       feedr
+      tableplus
     ]
     ++ (with nixpkgs-unstable; [
       ayugram-desktop

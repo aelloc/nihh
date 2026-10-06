@@ -3,7 +3,7 @@
     context = "Editor";
     bindings = {
       shift-k = "editor::Hover";
-      "space o" = "tab_switcher::Toggle";
+      "space o" = "project_panel::ToggleFocus";
       "space e" = "workspace::ToggleRightDock";
       "space p" = "outline::Toggle";
       "space v" = "editor::GoToDefinitionSplit";

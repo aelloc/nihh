@@ -22,6 +22,12 @@
   # For Tailscale
   services.openssh.enable = true;
 
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "server";
+    extraSetFlags = [ "--advertise-exit-node" ];
+  };
+
   users.users.builder = {
     isNormalUser = true;
 
