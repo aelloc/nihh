@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   programs.zed-editor = {
-    enable = true;
+    enable = false;
 
     mutableUserKeymaps = true;
     mutableUserSettings = true;

@@ -60,6 +60,7 @@ in
       feedr
       tableplus
       wpsoffice
+      anydesk
     ]
     ++ (with nixpkgs-unstable; [
       ayugram-desktop
