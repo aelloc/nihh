@@ -1,65 +1,14 @@
-{ ... }: {
-  use_system_prompts = false;
-  use_system_path_prompts = false;
+{
+  cli_default_open_behavior = "new_window";
+  ui_font_size = 18;
+  buffer_font_size = 15;
   disable_ai = true;
   vim_mode = true;
-  base_keymap = "VSCode";
-  buffer_font_family = "Maple Mono Normal NL NF";
-  # buffer_font_family = "Maple Mono Normal NL NF Medium";
-  buffer_font_features = {
-    calt = true;
-    ss08 = true;
-    ss07 = true;
-    zero = true;
-    ss04 = true;
-    ss01 = true;
-    ss05 = true;
-    ss18 = true;
-    ss10 = true;
-    ss11 = true;
-    ss12 = true;
-    ss13 = true;
-    ss16 = true;
-    ss15 = true;
-    ss17 = true;
-  };
-  relative_line_numbers = "enabled";
-  cursor_blink = false;
-  cursor_shape = "block";
-  theme = {
-    mode = "system";
-    light = "Gruvbox Light";
-    dark = "Gruvbox Dark Soft";
-  };
   vim = {
-    use_system_clipboard = "never";
+    use_system_clipboard = "always";
   };
   scrollbar = {
-    show = "always";
-  };
-  terminal = {
-    dock = "left";
-    font_size = 16;
-    shell = "system";
-    line_height = "comfortable";
-    font_family = "MonoLisa";
-    font_features = {
-      calt = true;
-      ss08 = true;
-      ss07 = true;
-      zero = true;
-      ss04 = true;
-      ss01 = true;
-      ss05 = true;
-      ss18 = true;
-      ss10 = true;
-      ss11 = true;
-      ss12 = true;
-      ss13 = true;
-      ss16 = true;
-      ss15 = true;
-      ss17 = true;
-    };
+    show = "auto";
   };
   inlay_hints = {
     enabled = true;
@@ -67,78 +16,40 @@
   agent = {
     enabled = false;
   };
-  diagnostics = {
-    button = true;
-    include_warnings = true;
-    inline = {
-      enabled = true;
-      update_debounce_ms = 130;
-      padding = 4;
-      min_column = 0;
-      max_severity = null;
-    };
+  buffer_font_family = "Maple Mono Normal NL NF";
+  relative_line_numbers = "enabled";
+  cursor_blink = false;
+  theme = {
+    mode = "dark";
+    light = "One Light";
+    dark = "Gruvbox Dark Hard";
   };
-  icon_theme = "Material Icon Theme";
+  load_direnv = "shell_hook";
   project_panel = {
     dock = "right";
+    diagnostic_badges = true;
   };
-  use_autoclose = true;
   languages = {
-    TypeScript = {
-      code_actions_on_format = {
-        "source.organizeImports" = true;
-      };
-    };
-    TSX = {
-      inlay_hints = {
-        show_type_hints = false;
-      };
-      code_actions_on_format = {
-        "source.organizeImports" = true;
-      };
-    };
-    SCSS = {
-      formatter = "prettier";
-      language_servers = [
-        "tailwindcss-language-server"
-        "..."
-      ];
-    };
-    CSS = {
-      formatter = "prettier";
-    };
-    Rust = {
+    Nix = {
       inlay_hints = {
         enabled = true;
       };
     };
-    JSON = {
-      formatter = "prettier";
-    };
-  };
-  git = {
-    git_gutter = "tracked_files";
-    inline_blame = {
-      delay_ms = 600;
-      enabled = true;
-    };
-  };
-  bottom_dock_layout = "contained";
-
-  lsp = {
-    rust-analyzer = {
-      initialization_options = {
-        inlayHints = {
-          maxLength = null;
-          lifetimeElisionHints = {
-            enable = "skip_trivial";
-            useParameterNames = true;
-          };
-          closureReturnTypeHints = {
-            enable = "always";
-          };
-        };
+    Rust = {
+      colorize_brackets = true;
+      inlay_hints = {
+        enabled = true;
       };
     };
+  };
+  auto_install_extensions = {
+    env = true;
+    git-firefly = true;
+    make = true;
+    material-icon-theme = true;
+    nix = true;
+    rust = true;
+    toml = true;
+    zig = true;
   };
 }

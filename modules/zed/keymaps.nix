@@ -1,31 +1,48 @@
 { ... }: [
   {
-    context = "Editor";
+    context = "Workspace && !CommandPalette && !Editor";
     bindings = {
-      shift-k = "editor::Hover";
-      "space o" = "project_panel::ToggleFocus";
-      "space e" = "workspace::ToggleRightDock";
-      "space p" = "outline::Toggle";
-      "space v" = "editor::GoToDefinitionSplit";
+      "space f w" = "project_search::ToggleFocus";
+      "space f f" = "file_finder::Toggle";
       "space c" = "pane::CloseActiveItem";
-      "space w" = "workspace::Save";
       "space q" = "zed::Quit";
-      "g r" = "editor::FindAllReferences";
-      shift-n = "editor::ToggleFold";
-      "space f" = "file_finder::Toggle";
-      ctrl-l = "pane::ActivateNextItem";
-      ctrl-h = "pane::ActivatePreviousItem";
+      "space t" = "terminal_panel::ToggleFocus";
     };
   }
   {
-    context = "Editor && vim_mode == visual && !VimWaiting && !VimObject";
+    context = "Editor && vim_mode == insert";
     bindings = {
-      p = [
-        "vim::Paste"
-        {
-          preserve_clipboard = true;
-        }
-      ];
+      "j k" = "vim::NormalBefore";
+    };
+  }
+  {
+    context = "Terminal";
+    bindings = {
+    };
+  }
+  {
+    context = "Editor && vim_mode == normal";
+    bindings = {
+      "space f w" = "project_search::ToggleFocus";
+      "space f f" = "file_finder::Toggle";
+      "space c" = "pane::CloseActiveItem";
+      "space q" = "zed::Quit";
+      "space t" = "terminal_panel::ToggleFocus";
+      "space w" = "workspace::Save";
+      "space /" = "vim::ToggleComments";
+      "space o" = "project_panel::ToggleFocus";
+    };
+  }
+  {
+    context = "ProjectPanel";
+    bindings = {
+      "space o" = "editor::ToggleFocus";
+    };
+  }
+  {
+    context = "Editor && vim_mode == visual";
+    bindings = {
+      "space /" = "vim::ToggleComments";
     };
   }
 ]

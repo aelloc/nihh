@@ -2,16 +2,17 @@
   programs.zed-editor = {
     enable = true;
 
-    userKeymaps = import ./keymaps.nix { };
+    mutableUserKeymaps = true;
+    mutableUserSettings = true;
 
-    userSettings = import ./settings.nix { };
+    # userKeymaps = import ./keymaps.nix { };
+    # userSettings = import ./settings.nix { };
 
     extraPackages = with pkgs; [
       wakatime-cli
     ];
 
     extensions = [
-      "wakatime"
       "zig"
       "rust"
       "material-icon-theme"

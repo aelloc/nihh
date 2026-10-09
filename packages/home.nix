@@ -59,6 +59,7 @@ in
       gradia
       feedr
       tableplus
+      wpsoffice
     ]
     ++ (with nixpkgs-unstable; [
       ayugram-desktop

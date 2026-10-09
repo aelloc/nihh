@@ -51,6 +51,7 @@
         packages = with pkgs; [
           self.formatter.${system}
 
+          nil
           nixd
           statix
           deadnix
