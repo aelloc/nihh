@@ -1,12 +1,12 @@
 { pkgs, ... }: {
   programs.zed-editor = {
-    enable = false;
+    enable = true;
 
     mutableUserKeymaps = true;
     mutableUserSettings = true;
 
-    # userKeymaps = import ./keymaps.nix { };
-    # userSettings = import ./settings.nix { };
+    userKeymaps = import ./keymaps.nix { };
+    userSettings = import ./settings.nix { };
 
     extraPackages = with pkgs; [
       wakatime-cli
