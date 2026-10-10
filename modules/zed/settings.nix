@@ -1,4 +1,4 @@
-{
+{ ... }: {
   cli_default_open_behavior = "new_window";
   ui_font_size = 18;
   buffer_font_size = 15;
