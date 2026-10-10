@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }:
@@ -15,11 +14,11 @@
       extensions = {
         force = true;
 
-        packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+        packages = with pkgs.firefox-addons; [
           ublock-origin
           darkreader
           sidebery
-          vimium
+          # vimium
           # youtube-recommended-videos
         ];
 

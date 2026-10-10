@@ -1,7 +1,7 @@
 {
   nixpkgs,
+  firefox-addons,
   home-manager,
-  nur,
   ...
 }@inputs:
 nixpkgs.lib.nixosSystem {
@@ -11,25 +11,24 @@ nixpkgs.lib.nixosSystem {
   // {
     hostname = "phantom";
   };
-
   modules = [
     ./configuration.nix
     inputs.spicetify-nix.nixosModules.default
 
-    nur.modules.nixos.default
-    nur.legacyPackages."x86_64-linux".repos.iopq.modules.xraya
-
+    {
+      nixpkgs.overlays = [
+        firefox-addons.overlays.default
+      ];
+    }
+  ]
+  ++ [
     home-manager.nixosModules.home-manager
-
     {
       home-manager = {
-        sharedModules = [
-          nur.modules.homeManager.default
-        ];
         useGlobalPkgs = true;
 
         extraSpecialArgs = { inherit inputs; };
-        users.phantom = import ../../home-manager/tuff-home.nix;
+        users.phantom = import ../../home-manager/phantom.nix;
       };
     }
   ];
