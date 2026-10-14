@@ -56,9 +56,7 @@
   nix = {
     settings = {
       substituters = [
-        "https://mirror.sjtu.edu.cn/nix-channels/store"
-        "https://mirrors.ustc.edu.cn/nix-channels/store"
-        "https://cache.xinux.uz"
+        "https://cache.xinux.uz/?priority=1"
         "https://nix-community.cachix.org"
         "https://ayugram-desktop.cachix.org"
         "https://cache.nixos.org/"

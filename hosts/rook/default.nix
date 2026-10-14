@@ -28,7 +28,7 @@ nixpkgs.lib.nixosSystem {
         useGlobalPkgs = true;
 
         extraSpecialArgs = { inherit inputs; };
-        users.phantom = import ../../home-manager/rook.nix;
+        users.sae = import ../../home-manager/rook.nix;
       };
     }
   ];
