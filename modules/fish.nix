@@ -18,6 +18,8 @@
       ez = "exit";
       ex = "exit";
 
+      zed = "zeditor";
+
       die = "shutdown now";
       re = "reboot";
       sleep = "systemctl hibernate";
