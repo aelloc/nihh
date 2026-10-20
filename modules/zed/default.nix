@@ -10,6 +10,8 @@
 
     extraPackages = with pkgs; [
       wakatime-cli
+      nodejs
+      cargo-toml-lint
     ];
 
     extensions = [

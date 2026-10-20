@@ -61,6 +61,7 @@ in
       tableplus
       wpsoffice
       anydesk
+      cinny-desktop
     ]
     ++ (with nixpkgs-unstable; [
       ayugram-desktop
